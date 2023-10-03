@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "storybook": "turbo run storybook",
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "config": "*",
+    "eslint": "^8.50.0",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.14"
+  },
+  "name": "portfolio",
+  "packageManager": "yarn@3.6.3",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "ui": "*"
+  }
+}
