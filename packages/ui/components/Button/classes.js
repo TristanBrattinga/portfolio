@@ -1,5 +1,5 @@
 const btn =
-    "flex items-center [&>*]:shrink-0 [&>*]:mr-1.5 rounded-full font-satoshi leading-none text-sm px-[22px] py-[14px] border border-[1px] text-center transition block w-fit"
+    "flex items-center [&>*]:shrink-0 [&>*]:mr-1.5 rounded-full font-ailerons leading-none text-sm px-[22px] py-[14px] border border-[1px] text-center transition block w-fit"
 
 exports.buttonClasses = variant => {
     if (variant === "primary") {

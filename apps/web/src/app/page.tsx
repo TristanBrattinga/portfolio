@@ -1,3 +1,5 @@
+import Header from "ui/components/Header"
+
 export default function Page() {
-    return <div>hoi</div>
+    return <Header />
 }

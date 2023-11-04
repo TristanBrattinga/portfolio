@@ -1,7 +1,6 @@
 import * as React from "react"
 import "../styles/global.css"
-import "../fonts/champion.css"
-import "../fonts/satoshi.css"
+import "../fonts/ailerons.css"
 import { Preview } from "@storybook/react"
 
 const preview: Preview = {
