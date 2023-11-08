@@ -1,4 +1,4 @@
-import { Card } from "../components/Card"
+import Card from "../components/Card"
 
 import Link from "next/link"
 import type { Meta } from "@storybook/react"

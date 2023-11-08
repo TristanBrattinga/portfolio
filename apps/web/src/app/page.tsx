@@ -1,5 +1,12 @@
-import Header from "ui/components/Header"
+import CardGrid from "ui/components/CardGrid"
+import Toggle from "ui/components/Toggle"
 
 export default function Page() {
-    return <Header />
+    return (
+        <>
+            <div className={"mt-12"}>
+                <CardGrid />
+            </div>
+        </>
+    )
 }
