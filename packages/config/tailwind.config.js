@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const { fontFamily } = require("tailwindcss/defaultTheme")
 
 module.exports = {
     mode: "jit",
@@ -24,7 +25,7 @@ module.exports = {
         extend: {
             colors: {},
             fontFamily: {
-                ailerons: ["var(--font-ailerons)"],
+                ailerons: ["var(--font-ailerons)", ...fontFamily.sans],
             },
         },
     },
