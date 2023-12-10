@@ -8,13 +8,6 @@ module.exports = {
     },
     darkMode: "class",
     theme: {
-        fontSize: {
-            sm: ["14px"],
-            base: ["18px"],
-            xl: ["24px"],
-            "2xl": ["60px"],
-            "3xl": ["60px"],
-        },
         container: {
             center: true,
             padding: "60px",
@@ -26,6 +19,7 @@ module.exports = {
             colors: {},
             fontFamily: {
                 ailerons: ["var(--font-ailerons)", ...fontFamily.sans],
+                raleway: ["var(--font-raleway)", ...fontFamily.sans],
             },
         },
     },

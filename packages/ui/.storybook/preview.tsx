@@ -1,7 +1,9 @@
 import * as React from "react"
 import "../styles/global.css"
-import "../fonts/ailerons.css"
 import { Preview } from "@storybook/react"
+
+import "swiper/css"
+import { ailerons, raleway } from "web/src/lib/fonts"
 
 const preview: Preview = {
     parameters: {
@@ -29,7 +31,13 @@ const preview: Preview = {
             defaultValue: false, // Enable dark mode by default on all stories
         },
     },
-    decorators: [Story => <Story />],
+    decorators: [
+        Story => (
+            <div className={`${ailerons.className} ${raleway.variable} scroll-smooth`}>
+                <Story />
+            </div>
+        ),
+    ],
 }
 
 export default preview

@@ -16,7 +16,7 @@ const Modal = ({ isOpen, onClose }: ModalProps) => {
 
     return (
         <motion.div
-            className="fixed bottom-4 left-4 px-4 py-6 bg-white rounded-md shadow-md"
+            className="fixed bottom-4 left-4 px-4 py-6 bg-white rounded-md shadow-md z-10"
             initial="hidden"
             animate={isOpen ? "visible" : "hidden"}
             variants={modalVariants}
