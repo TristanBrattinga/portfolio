@@ -3,7 +3,7 @@
     font-style: normal;
     font-display: swap;
     font-weight: 400;
-    src: url("../../../apps/web/src/fonts/Ailerons-Typeface.otf") format("opentype");
+    src: url("../static/fonts/Ailerons-Typeface.otf") format("opentype");
 }
 
 :root {

@@ -5,7 +5,7 @@ import { ailerons, raleway } from "@lib/fonts"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html className={`${ailerons.className} ${raleway.variable} scroll-smooth`} lang="en">
+        <html className={`${ailerons.variable} ${raleway.variable} scroll-smooth`} lang="en">
             <body>
                 <MainLayout>
                     <main>{children}</main>

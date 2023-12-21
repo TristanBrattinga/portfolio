@@ -9,7 +9,7 @@ export const raleway = Raleway({
 })
 
 export const ailerons = localFont({
-    src: "../fonts/Ailerons-Typeface.otf",
+    src: "../../../../packages/ui/static/fonts/Ailerons-Typeface.otf",
     variable: "--font-ailerons",
     display: "swap",
 })

@@ -1,9 +1,15 @@
 import * as React from "react"
 import "../styles/global.css"
 import { Preview } from "@storybook/react"
-
 import "swiper/css"
-import { ailerons, raleway } from "web/src/lib/fonts"
+import { raleway } from "web/src/lib/fonts"
+import localFont from "next/font/local"
+
+const ailerons = localFont({
+    src: "../fonts/Ailerons-Typeface.otf",
+    variable: "--font-ailerons",
+    display: "swap",
+})
 
 const preview: Preview = {
     parameters: {
@@ -33,7 +39,7 @@ const preview: Preview = {
     },
     decorators: [
         Story => (
-            <div className={`${ailerons.className} ${raleway.variable} scroll-smooth`}>
+            <div className={`${ailerons.variable} ${raleway.variable} scroll-smooth`}>
                 <Story />
             </div>
         ),
