@@ -19,8 +19,6 @@ const Header = () => {
         }
     }
 
-    console.log(menuIsOpen)
-
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
         return () => {

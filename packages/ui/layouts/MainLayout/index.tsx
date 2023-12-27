@@ -6,6 +6,7 @@ import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import ToTopButton from "../../components/ToTopButton"
 import { Sidebar } from "../../components/Sidebar"
+import Cursor from "../../components/Cursor"
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
@@ -14,6 +15,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             {children}
             <ToTopButton />
             <Sidebar content={<></>}></Sidebar>
+            <Cursor />
         </>
     )
 }

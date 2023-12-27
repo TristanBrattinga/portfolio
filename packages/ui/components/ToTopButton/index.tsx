@@ -8,7 +8,7 @@ const ToTopButton = () => {
                 onClick={() => {
                     window.scrollTo(0, 0)
                 }}
-                className={"flex justify-center items-center p-4 border border-white"}
+                className={"flex justify-center items-center p-4 border border-white cursor-none"}
             >
                 <ChevronIcon className={"rotate-90"} />
             </button>
