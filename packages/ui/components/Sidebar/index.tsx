@@ -5,6 +5,10 @@ import { sidebarSlideIn } from "../../utils/animations"
 import { useStore } from "web/src/lib/context/store-context"
 import { scrollLock } from "../../utils/scrollLock"
 import { useEffect } from "react"
+import CloseIcon from "../../icons/CloseIcon"
+import UserIcon from "../../icons/UserIcon"
+import ChatIcon from "../../icons/ChatIcon"
+import Link from "next/link"
 
 export const Sidebar = ({ content }: SidebarProps) => {
     const { menuIsOpen, closeMenu } = useStore()
@@ -28,20 +32,23 @@ export const Sidebar = ({ content }: SidebarProps) => {
             ></div>
             <div
                 className={clsx(
-                    "bg-white fixed right-0 top-0 z-50 h-screen w-screen p-5 md:w-1/2",
+                    "flex flex-col items-center bg-blue-950 fixed right-0 top-0 z-50 h-screen p-5 w-1/5",
                     sidebarSlideIn(menuIsOpen),
                 )}
             >
-                <div
-                    className={clsx(
-                        "font-champion mb-10 ml-auto w-fit cursor-pointer text-[30px] uppercase text-black md:mb-20",
-                    )}
-                    onClick={closeMenu}
-                >
-                    Close
+                <div className="cursor-pointer mb-10" onClick={closeMenu}>
+                    <CloseIcon color="white" />
                 </div>
-                <div className="m-auto max-w-lg">
-                    <div>{content}</div>
+                <div className="flex flex-col gap-4">
+                    <Link href="#" className="flex justify-center items-center p-2 bg-blue-700 rounded">
+                        <UserIcon color="white" />
+                    </Link>
+                    <Link href="#" className="flex justify-center items-center p-2 bg-blue-700 rounded">
+                        <UserIcon color="white" />
+                    </Link>
+                    <Link href="/contact" className="flex justify-center items-center p-2 bg-blue-700 rounded">
+                        <ChatIcon color="white" />
+                    </Link>
                 </div>
             </div>
         </div>

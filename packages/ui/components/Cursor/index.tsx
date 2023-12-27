@@ -27,7 +27,7 @@ const Cursor = () => {
         <motion.div
             variants={variants}
             animate="default"
-            className="fixed flex justify-center items-center top-0 left-0 w-10 h-10 border border-white pointer-events-none"
+            className="hidden fixed lg:flex justify-center items-center top-0 left-0 w-10 h-10 border border-white pointer-events-none"
         >
             <div className="w-5 h-5 border border-white"></div>
         </motion.div>
