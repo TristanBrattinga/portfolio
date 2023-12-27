@@ -5,6 +5,7 @@ import type { MainLayoutProps } from "./types"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
 import ToTopButton from "../../components/ToTopButton"
+import { Sidebar } from "../../components/Sidebar"
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
@@ -12,7 +13,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <Header />
             {children}
             <ToTopButton />
-            <Footer />
+            <Sidebar content={<></>}></Sidebar>
         </>
     )
 }

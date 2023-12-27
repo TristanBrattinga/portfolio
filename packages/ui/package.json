@@ -43,7 +43,7 @@
     "webpack": "^5.89.0"
   },
   "dependencies": {
-    "@hookform/resolvers": "^3.3.2",
+    "@hookform/resolvers": "^3.3.3",
     "@radix-ui/react-switch": "^1.0.3",
     "@storybook/nextjs": "^7.6.6",
     "animejs": "^3.2.2",

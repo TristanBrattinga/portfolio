@@ -10,7 +10,7 @@ export default meta
 
 export const primary = () => {
     return (
-        <div>
+        <div className="h-[2000px]">
             <Header />
         </div>
     )

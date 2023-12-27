@@ -39,7 +39,7 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
                 <label
                     htmlFor={id || name}
                     className={clsx(
-                        "absolute text-white cursor-text left-4 top-4 leading-none peer-focus:bg-[#202124] transition-all duration-200 peer-focus:font-semibold text-base peer-focus:px-1 peer-focus:-translate-y-[150%] peer-focus:scale-105 peer-focus:left-4 peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
+                        "absolute text-white select-none cursor-text left-4 top-4 leading-none peer-focus:bg-[#202124] transition-all duration-200 peer-focus:font-semibold text-base peer-focus:px-1 peer-focus:-translate-y-[150%] peer-focus:scale-105 peer-focus:left-4 peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
                     )}
                 >
                     {label}
@@ -47,6 +47,11 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
                 <span className="absolute text-white text-2xl font-bold -right-2 -top-3 leading-none">{`${
                     required ? "*" : ""
                 }`}</span>
+                {error && (
+                    <p className="text-[12px] mb-0 mt-2 error pt-1 text-red-600 absolute right-0 top-[-10px]">
+                        {error?.message?.toString()}
+                    </p>
+                )}
             </div>
         )
     },

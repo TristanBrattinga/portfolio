@@ -1,14 +1,21 @@
 "use client"
 
-import InputWrapper from "../FormFields/InputWrapper"
-import InputField from "../FormFields/InputField"
 import * as Yup from "yup"
 import { FormProvider, useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import Input from "../FormFields/Input"
 import Button from "../Button"
+import clsx from "clsx"
+import CloseIcon from "../../icons/CloseIcon"
+import { slideInBottom } from "../../utils/animations"
+import { useState } from "react"
+import CheckmarkIcon from "../../icons/CheckmarkIcon"
 
 const ContactForm = () => {
+    const [success, setSuccess] = useState(false)
+    const [showMessage, setShowMessage] = useState<boolean>(false)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
+
     const schema = Yup.object({
         firstName: Yup.string().min(1, "This field is required"),
         lastName: Yup.string().min(1, "This field is required"),
@@ -20,17 +27,68 @@ const ContactForm = () => {
 
     const methods = useForm<FormSchema>({ resolver: yupResolver(schema) })
 
+    const onSubmit = async (values: FormSchema) => {
+        try {
+            setIsLoading(true)
+            setIsLoading(false)
+            setSuccess(true)
+        } catch (e) {
+            setIsLoading(false)
+            setSuccess(false)
+            console.log(e)
+        } finally {
+            setShowMessage(true)
+            methods.reset()
+            setTimeout(() => {
+                setShowMessage(false)
+            }, 5000)
+        }
+    }
+
     return (
-        <section className="flex mt-20 justify-center">
+        <section>
             <FormProvider {...methods}>
                 <form id="contactForm" className="flex flex-col gap-4">
                     <Input {...methods.register("firstName")} label={"First name"} required />
                     <Input {...methods.register("lastName")} label={"Last name"} required />
                     <Input {...methods.register("email")} label={"Email address"} required />
                     <Input {...methods.register("message")} label={"Your message"} required />
-                    <Button></Button>
+                    <Button onClick={methods.handleSubmit(onSubmit)} variant="primary" loading={isLoading}>
+                        Send
+                    </Button>
                 </form>
             </FormProvider>
+            <div
+                className={clsx(
+                    "flex items-center justify-between rounded-xl bg-green-50 p-2 select-none mt-4",
+                    {
+                        "bg-green-50": success,
+                        "bg-red-50": !success,
+                    },
+                    slideInBottom(showMessage),
+                )}
+            >
+                <div className="flex items-center gap-4 pl-4">
+                    <CheckmarkIcon color={success ? "green" : "red"} size={15} />
+                    <p
+                        className={clsx("text-sm", {
+                            "text-green-800": success,
+                            "text-red-600": !success,
+                        })}
+                    >
+                        {success ? "Form successfully submitted" : "Something went wrong. Please contact us by email."}
+                    </p>
+                </div>
+                <button
+                    onClick={() => setShowMessage(false)}
+                    className={clsx("p-3 rounded-md transition-all duration-200", {
+                        "hover:bg-green-100": success,
+                        "hover:bg-red-100": !success,
+                    })}
+                >
+                    <CloseIcon size={15} color={success ? "#22c55e" : "#ef4444"} />
+                </button>
+            </div>
         </section>
     )
 }

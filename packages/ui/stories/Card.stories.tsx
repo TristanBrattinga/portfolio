@@ -6,13 +6,16 @@ import type { Meta } from "@storybook/react"
 const meta: Meta<typeof Card> = {
     title: "Components/Card",
     component: Card,
+    parameters: {
+        layout: "centered",
+    },
 }
 export default meta
 
 export const primary = () => {
     return (
-        <div className="m-10">
-            <Card />
+        <div>
+            <Card title="Webbers stage" image="/images/stock.jpg" />
         </div>
     )
 }
