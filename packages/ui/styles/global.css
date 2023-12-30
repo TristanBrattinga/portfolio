@@ -44,3 +44,18 @@
         background-position: 100% 100%;
     }
 }
+
+.circle-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1px;
+    stroke-dasharray: 0 100;
+    transition: stroke-dasharray 0.3s linear;
+}

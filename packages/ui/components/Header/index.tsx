@@ -66,7 +66,7 @@ const Header = () => {
                 </ul>
                 <ChevronIcon
                     className={clsx(
-                        "hidden lg:block absolute -rotate-90 group-hover:opacity-0 transition-all duration-200 -z-10",
+                        "hidden lg:block absolute right-40 -rotate-90 group-hover:opacity-0 transition-all duration-200 -z-10",
                         {
                             hidden: isScrolled,
                         },

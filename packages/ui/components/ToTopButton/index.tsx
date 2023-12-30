@@ -1,9 +1,33 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import ChevronIcon from "../../icons/ChevronIcon"
+import clsx from "clsx"
 
 const ToTopButton = () => {
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    const handleScroll = () => {
+        if (window.scrollY > 200) {
+            setIsScrolled(true)
+        } else {
+            setIsScrolled(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll)
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, [])
+
     return (
-        <div className={"fixed bottom-5 right-5 z-10"}>
+        <div
+            className={clsx("bottom-5 right-5 z-10", {
+                hidden: !isScrolled,
+                fixed: isScrolled,
+            })}
+        >
             <button
                 onClick={() => {
                     window.scrollTo(0, 0)

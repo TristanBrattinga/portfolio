@@ -13,7 +13,7 @@ export default function Page() {
     }
 
     return (
-        <div className="">
+        <div className="h-[2000px]">
             {/*<Card title={"Webbers stage"} image={"/images/stock.jpg"} />*/}
             <div className="relative">
                 <button className="fixed bottom-4 left-4 bg-gray-500 p-2 rounded-full" onClick={handleModal}>
