@@ -6,8 +6,10 @@ import { useEffect, useState } from "react"
 import clsx from "clsx"
 import HamburgerMenuIcon from "../../icons/HamburgerMenuIcon"
 import { useStore } from "web/src/lib/context/store-context"
+import { slideInLeft, useAnimations } from "../../utils/animations"
 
 const Header = () => {
+    const { ref, inView } = useAnimations()
     const [isScrolled, setIsScrolled] = useState(false)
     const { menuIsOpen, openMenu } = useStore()
 
@@ -27,7 +29,7 @@ const Header = () => {
     }, [])
 
     return (
-        <section className={" sticky top-0"}>
+        <section className={"sticky top-0"}>
             <div
                 className={clsx(
                     "flex px-5 lg:px-10 group w-full fixed py-4 justify-between items-center after:hidden lg:after:block after:absolute after:inset-x-0 after:bottom-0 after:h-[.5px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:hover:scale-x-100 after:origin-center",
@@ -35,9 +37,11 @@ const Header = () => {
             >
                 <Link href={"/"}>
                     <h1
-                        className={
-                            "text-start lg:text-center font-ailerons text-2xl md:text-3xl lg:text-4xl text-white"
-                        }
+                        ref={ref}
+                        className={clsx(
+                            "text-start lg:text-center font-ailerons text-2xl md:text-3xl lg:text-4xl text-white",
+                            slideInLeft(inView),
+                        )}
                     >
                         Tristan Brattinga
                     </h1>

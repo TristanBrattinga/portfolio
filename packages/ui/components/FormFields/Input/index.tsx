@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { ChangeEvent, forwardRef, useEffect, useState } from "react"
+import { ChangeEvent, forwardRef, useEffect, useImperativeHandle, useState } from "react"
 import { InputFieldProps } from "./types"
 import { get, useFormContext } from "react-hook-form"
 import clsx from "clsx"
@@ -12,11 +12,10 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
             formState: { errors },
         } = useFormContext()
         const error = get(errors, name)
-        const [inputValue, setInputValue] = useState("")
+        const inputRef = React.useRef<HTMLInputElement>(null)
 
-        const handleInputChange = (e: any) => {
-            setInputValue(e.target.value)
-        }
+        useImperativeHandle(ref, () => inputRef.current!)
+
         return (
             <div className="relative">
                 <input
@@ -32,17 +31,17 @@ const InputField = forwardRef<HTMLInputElement, InputFieldProps>(
                         className,
                     )}
                     type={type}
-                    placeholder={placeholder}
-                    onChange={handleInputChange}
+                    placeholder={" "}
                     {...props}
                 />
                 <label
                     htmlFor={id || name}
+                    onClick={() => inputRef.current?.focus()}
                     className={clsx(
                         "absolute text-white select-none cursor-text left-4 top-4 leading-none peer-focus:bg-[#202124] transition-all duration-200 peer-focus:font-semibold text-base peer-focus:px-1 peer-focus:-translate-y-[150%] peer-focus:scale-105 peer-focus:left-4 peer-disabled:cursor-not-allowed peer-disabled:opacity-70",
                     )}
                 >
-                    {label}
+                    {placeholder}
                 </label>
                 <span className="absolute text-white text-2xl font-bold -right-2 -top-3 leading-none">{`${
                     required ? "*" : ""

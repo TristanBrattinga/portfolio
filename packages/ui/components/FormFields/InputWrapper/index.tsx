@@ -1,6 +1,6 @@
-import { InputWrapperProps } from './types'
-import { get, useFormContext } from 'react-hook-form'
-import classNames from 'classnames'
+import { InputWrapperProps } from "./types"
+import { get, useFormContext } from "react-hook-form"
+import clsx from "clsx"
 
 const InputWrapper = ({ id, name, children, customError, label, required, isCheckbox }: InputWrapperProps) => {
     const {
@@ -15,21 +15,19 @@ const InputWrapper = ({ id, name, children, customError, label, required, isChec
                 {!isCheckbox && label && (
                     <label
                         htmlFor={id || name}
-                        className={classNames(
-                            'block mb-2 text-xs peer-disabled:cursor-not-allowed peer-disabled:opacity-70',
-                        )}
+                        className={clsx("block mb-2 text-xs peer-disabled:cursor-not-allowed peer-disabled:opacity-70")}
                     >
                         {label}
-                        {`${required ? ' *' : ''}`}
+                        {`${required ? " *" : ""}`}
                     </label>
                 )}
             </div>
             <div className="flex gap-4 items-center w-full">
                 {children}
                 {isCheckbox && label && (
-                    <label htmlFor={name} className={'text-sm my-2 text-brand-black'}>
+                    <label htmlFor={name} className={"text-sm my-2 text-brand-black"}>
                         {label}
-                        {`${required ? ' *' : ''}`}
+                        {`${required ? " *" : ""}`}
                     </label>
                 )}
             </div>

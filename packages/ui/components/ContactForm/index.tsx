@@ -7,11 +7,12 @@ import Input from "../FormFields/Input"
 import Button from "../Button"
 import clsx from "clsx"
 import CloseIcon from "../../icons/CloseIcon"
-import { slideInBottom } from "../../utils/animations"
+import { slideInBottom, slideInLeft, slideInTop, useAnimations } from "../../utils/animations"
 import { useState } from "react"
 import CheckmarkIcon from "../../icons/CheckmarkIcon"
 
 const ContactForm = () => {
+    const { ref, inView } = useAnimations()
     const [success, setSuccess] = useState(false)
     const [showMessage, setShowMessage] = useState<boolean>(false)
     const [isLoading, setIsLoading] = useState<boolean>(false)
@@ -47,12 +48,15 @@ const ContactForm = () => {
 
     return (
         <section>
+            <h1 ref={ref} className={clsx("text-white text-5xl mb-10", slideInLeft(inView))}>
+                Say Hi
+            </h1>
             <FormProvider {...methods}>
-                <form id="contactForm" className="flex flex-col gap-4">
-                    <Input {...methods.register("firstName")} label={"First name"} required />
-                    <Input {...methods.register("lastName")} label={"Last name"} required />
-                    <Input {...methods.register("email")} label={"Email address"} required />
-                    <Input {...methods.register("message")} label={"Your message"} required />
+                <form ref={ref} id="contactForm" className={clsx("flex flex-col gap-4", slideInTop(inView))}>
+                    <Input {...methods.register("firstName")} label={"test"} placeholder={"First name"} required />
+                    <Input {...methods.register("lastName")} label={"test"} placeholder={"Last name"} required />
+                    <Input {...methods.register("email")} label={"test"} placeholder={"Email address"} required />
+                    <Input {...methods.register("message")} label={"test"} placeholder={"Your message"} required />
                     <Button onClick={methods.handleSubmit(onSubmit)} variant="primary" loading={isLoading}>
                         Send
                     </Button>
