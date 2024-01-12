@@ -5,15 +5,19 @@ import type { MainLayoutProps } from "./types"
 import Header from "../../components/Header"
 import ToTopButton from "../../components/ToTopButton"
 import { Sidebar } from "../../components/Sidebar"
+import { useStore } from "web/src/lib/context/store-context"
 
 const MainLayout = ({ children }: MainLayoutProps) => {
+    const { darkMode } = useStore()
     return (
         <>
-            <Header />
-            {children}
-            <ToTopButton />
-            <Sidebar content={<></>}></Sidebar>
-            {/*<Cursor />*/}
+            <div className={`${darkMode ? "dark" : "light"}`}>
+                <Header />
+                {children}
+                <ToTopButton />
+                <Sidebar content={<></>}></Sidebar>
+                {/*<Cursor />*/}
+            </div>
         </>
     )
 }

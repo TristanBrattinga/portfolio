@@ -12,5 +12,9 @@ const meta: Meta<typeof Cursor> = {
 export default meta
 
 export const Primary = () => {
-    return <Cursor />
+    return (
+        <div className="h-[2000px]">
+            <Cursor />
+        </div>
+    )
 }

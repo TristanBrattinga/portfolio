@@ -4,6 +4,9 @@ import React, { MouseEvent, MouseEventHandler, PropsWithChildren, useEffect, use
 import { useBoolean } from "ui/hooks/useBoolean"
 
 interface StoreContext {
+    darkMode: boolean
+    darkModeToggle: () => void
+
     menuIsOpen: boolean
     closeMenu: () => void
     openMenu: () => void
@@ -19,11 +22,18 @@ export const useStore = () => {
     return context
 }
 export const StoreProvider = ({ children }: PropsWithChildren<{}>) => {
+    const [darkMode, setDarkMode] = useState<boolean>(false)
     const { value: menuIsOpen, setFalse: closeMenu, setTrue: openMenu } = useBoolean(false)
+
+    const darkModeToggle = () => {
+        setDarkMode(!darkMode)
+    }
 
     return (
         <StoreContext.Provider
             value={{
+                darkMode,
+                darkModeToggle,
                 closeMenu,
                 openMenu,
                 menuIsOpen,

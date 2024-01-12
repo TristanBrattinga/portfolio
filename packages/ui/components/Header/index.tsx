@@ -11,7 +11,7 @@ import { slideInLeft, useAnimations } from "../../utils/animations"
 const Header = () => {
     const { ref, inView } = useAnimations()
     const [isScrolled, setIsScrolled] = useState(false)
-    const { menuIsOpen, openMenu } = useStore()
+    const { openMenu } = useStore()
 
     const handleScroll = () => {
         if (window.scrollY > 0) {
@@ -29,10 +29,10 @@ const Header = () => {
     }, [])
 
     return (
-        <section className={"sticky top-0"}>
+        <section className={"fixed top-0 mix-blend-difference"}>
             <div
                 className={clsx(
-                    "flex px-5 lg:px-10 group w-full fixed py-4 justify-between items-center after:hidden lg:after:block after:absolute after:inset-x-0 after:bottom-0 after:h-[.5px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:hover:scale-x-100 after:origin-center",
+                    "flex group w-full fixed py-4 container justify-between items-center after:hidden lg:after:block after:absolute after:inset-x-0 after:bottom-0 after:h-[.5px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:hover:scale-x-100 after:origin-center",
                 )}
             >
                 <Link href={"/"}>
@@ -58,7 +58,7 @@ const Header = () => {
                         },
                     )}
                 >
-                    <li className={"hover:text-[#759FBC] transition-colors duration-200"}>
+                    <li className={"hover:text-[#759FBC] hover:scale-125 transition-all duration-200"}>
                         <Link href={"/work"}>Work</Link>
                     </li>
                     <li className={"hover:text-[#759FBC] transition-colors duration-200"}>

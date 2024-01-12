@@ -44,7 +44,7 @@ const Cursor = () => {
         default: {
             x: mousePosition.x - 20,
             y: mousePosition.y - 20,
-            transition: { duration: 0, type: "spring", stiffness: 50, damping: 20 },
+            transition: { duration: 0, type: "spring", stiffness: 100, damping: 20 },
         },
     }
 

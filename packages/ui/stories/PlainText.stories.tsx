@@ -1,11 +1,17 @@
-import Image from "next/image"
-import Plaintext from "ui/components/PlainText"
+import PlainText from "../components/PlainText"
 
-export default function Page() {
+import type { Meta } from "@storybook/react"
+
+const meta: Meta<typeof PlainText> = {
+    title: "Components/PlainText",
+    component: PlainText,
+}
+export default meta
+
+export const Primary = () => {
     return (
-        <div className={"container py-12 "}>
-            <Plaintext
-                content="Last year I made the choice to go back to school because of the Corona pandemic. I was unemployed for a
+        <PlainText
+            content="Last year I made the choice to go back to school because of the Corona pandemic. I was unemployed for a
                 while because of the lockdown and didn't know what to do. I chose to do Communication & Multimedia
                 Design. When I was researching this study I was instantly intrigued by the curriculum. I have always had
                 a certain interest for web development and UI/UX Design. What this study does good is the combination
@@ -17,8 +23,7 @@ export default function Page() {
                 games, DJ'ing and being in the kitchen ofcourse! Going to restaurant is also one of my main
                 hobbies. I'm a hard worker and someone who is always striving for more. Next to this I am a
                 perfectionist in everything I do. I can't do half work. Sometimes this can also be one of my flaws.
-                I sometimes tend to overdo things. I am a very social person who is not afraid to speak up. "
-            />
-        </div>
+                I sometimes tend to overdo things. I am a very social person who is not afraid to speak up."
+        />
     )
 }

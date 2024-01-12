@@ -6,11 +6,11 @@ import { Providers } from "./providers"
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html className={`${ailerons.variable} ${raleway.variable} scroll-smooth`} lang="en">
-            <body>
+        <html className={`${ailerons.variable} ${raleway.variable} !scroll-smooth`} lang="en">
+            <body className="dark:bg-white">
                 <Providers>
                     <MainLayout>
-                        <main>{children}</main>
+                        <main className="mt-10">{children}</main>
                     </MainLayout>
                 </Providers>
             </body>
