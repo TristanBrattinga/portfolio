@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "config": "*",
-    "dotenv": "^16.3.1",
-    "next": "^14.0.4",
+    "dotenv": "^16.4.1",
+    "next": "^14.1.0",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -20,11 +20,11 @@
     "ui": "*"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
-    "@types/node": "^20.11.0",
-    "@types/react": "^18.2.47",
+    "@babel/core": "^7.23.9",
+    "@types/node": "^20.11.6",
+    "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.16",
+    "autoprefixer": "^10.4.17",
     "config": "*",
     "tsconfig": "*",
     "typescript": "^5.3.3"

@@ -11,7 +11,7 @@
   "devDependencies": {
     "config": "*",
     "eslint": "^8.56.0",
-    "prettier": "^3.2.1",
+    "prettier": "^3.2.4",
     "turbo": "^1.11.3"
   },
   "name": "portfolio",

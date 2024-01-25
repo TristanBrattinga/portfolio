@@ -1,26 +1,27 @@
-"use client"
-
-import Modal from "ui/components/Modal"
-import SettingsIcon2 from "ui/icons/SettingsIcon2"
-import { useState } from "react"
-import Card from "ui/components/Card"
+import LanguageSwitcher from "ui/components/LanguageSwitcher"
+import PlainText from "ui/components/PlainText"
+import ProjectCard from "ui/components/ProjectCard"
+import TailwindIcon from "ui/icons/TailwindIcon"
 
 export default function Page() {
-    const [isModalOpen, setIsModalOpen] = useState(false)
-
-    const handleModal = () => {
-        setIsModalOpen(!isModalOpen)
-    }
-
     return (
-        <div className="h-[2000px]">
-            {/*<Card title={"Webbers stage"} image={"/images/stock.jpg"} />*/}
-            <div className="relative">
-                <button className="fixed bottom-4 left-4 bg-gray-500 p-2 rounded-full" onClick={handleModal}>
-                    <SettingsIcon2 />
-                </button>
-                <Modal isOpen={isModalOpen} onClose={handleModal} />
+        <>
+            <div className="container">
+                <LanguageSwitcher />
+                <PlainText content="My name is Tristan Brattinga, I'm 24 years old and I'm a front-end developer! " />
+                <ProjectCard
+                    title="Project Title"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel metus eu mauris volutpat
+                    consectetur ac a justo. In hac habitasse platea dictumst. Integer nec justo eget velit fermentum
+                    elementum. Curabitur eget justo non quam commodo vulputate. Duis eu ligula vel justo accumsan
+                    lacinia nec a velit. Curabitur eget tellus a leo iaculis auctor nec vel turpis. Sed eget risus at
+                    ipsum malesuada sollicitudin. Aliquam vestibulum ligula eget metus ultricies, sit amet consequat
+                    nunc scelerisque. Nullam ultricies nisl non ipsum finibus, et feugiat erat viverra."
+                    date={new Date()}
+                    image="/images/stock.jpg"
+                    techStack={[]}
+                />
             </div>
-        </div>
+        </>
     )
 }

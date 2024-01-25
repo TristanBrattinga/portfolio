@@ -1,6 +1,6 @@
 import { PlainTextProps } from "./types"
 
-const Plaintext = ({ content }: PlainTextProps) => {
+const PlainText = ({ content }: PlainTextProps) => {
     return (
         <div>
             <p className="text-white">{content}</p>
@@ -8,4 +8,4 @@ const Plaintext = ({ content }: PlainTextProps) => {
     )
 }
 
-export default Plaintext
+export default PlainText

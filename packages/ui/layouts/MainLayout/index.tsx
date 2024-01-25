@@ -6,6 +6,7 @@ import Header from "../../components/Header"
 import ToTopButton from "../../components/ToTopButton"
 import { Sidebar } from "../../components/Sidebar"
 import { useStore } from "web/src/lib/context/store-context"
+import Cursor from "../../components/Cursor"
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     const { darkMode } = useStore()

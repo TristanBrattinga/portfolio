@@ -5,9 +5,6 @@ import type { Meta } from "@storybook/react"
 const meta: Meta<typeof LanguageSwitcher> = {
     title: "Components/LanguageSwitcher",
     component: LanguageSwitcher,
-    parameters: {
-        layout: "centered",
-    },
 }
 export default meta
 
