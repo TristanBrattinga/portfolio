@@ -6,9 +6,6 @@ import type { Meta } from "@storybook/react"
 const meta: Meta<typeof Card> = {
     title: "Components/Card",
     component: Card,
-    parameters: {
-        layout: "centered",
-    },
 }
 export default meta
 

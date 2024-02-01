@@ -18,3 +18,13 @@ export const primary = () => {
         </div>
     )
 }
+
+export const social = () => {
+    return (
+        <div className="m-10">
+            <Button href={"#"} variant={"social"}>
+                Hello
+            </Button>
+        </div>
+    )
+}

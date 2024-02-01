@@ -1,11 +1,7 @@
 import { PlainTextProps } from "./types"
 
 const PlainText = ({ content }: PlainTextProps) => {
-    return (
-        <div>
-            <p className="text-white">{content}</p>
-        </div>
-    )
+    return <section className="container text-white">{content}</section>
 }
 
 export default PlainText

@@ -12,7 +12,7 @@
     "config": "*",
     "eslint": "^8.56.0",
     "prettier": "^3.2.4",
-    "turbo": "^1.11.3"
+    "turbo": "^1.12.2"
   },
   "name": "portfolio",
   "packageManager": "yarn@4.0.2",

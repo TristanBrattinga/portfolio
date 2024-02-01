@@ -29,7 +29,7 @@ const Header = () => {
     }, [])
 
     return (
-        <section className={"fixed top-0 mix-blend-difference w-full"}>
+        <header className={"fixed top-0 w-full"}>
             <div
                 className={clsx(
                     "flex group w-full fixed py-4 container justify-between items-center after:hidden lg:after:block after:absolute after:inset-x-0 after:bottom-0 after:h-[.5px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:hover:scale-x-100 after:origin-center",
@@ -77,7 +77,7 @@ const Header = () => {
                     )}
                 />
             </div>
-        </section>
+        </header>
     )
 }
 

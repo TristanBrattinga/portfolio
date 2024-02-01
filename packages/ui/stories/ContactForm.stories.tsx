@@ -5,9 +5,6 @@ import type { Meta } from "@storybook/react"
 const meta: Meta<typeof ContactForm> = {
     title: "Components/ContactForm",
     component: ContactForm,
-    parameters: {
-        layout: "centered",
-    },
 }
 export default meta
 

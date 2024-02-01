@@ -1,3 +1,5 @@
+import { ReactNode } from "react"
+
 export type PlainTextProps = {
-    content: string
+    content: ReactNode
 }

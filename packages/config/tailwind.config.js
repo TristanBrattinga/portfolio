@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme")
+const { fontFamily, screens } = require("tailwindcss/defaultTheme")
 
 module.exports = {
     mode: "jit",
@@ -8,15 +8,26 @@ module.exports = {
     },
     darkMode: "class",
     theme: {
+        screens: {
+            ...screens,
+            xl: "1440px",
+        },
         container: {
             center: true,
-            padding: "60px",
-            screens: {
-                xl: "1440px",
+            padding: {
+                DEFAULT: "16px",
+                xl: "40px",
             },
         },
         extend: {
-            colors: {},
+            screens: {
+                lg: "1200px",
+                xl: "1440px",
+            },
+
+            colors: {
+                "grey-base": "#202124",
+            },
             fontFamily: {
                 ailerons: ["var(--font-ailerons)", ...fontFamily.sans],
                 raleway: ["var(--font-raleway)", ...fontFamily.sans],

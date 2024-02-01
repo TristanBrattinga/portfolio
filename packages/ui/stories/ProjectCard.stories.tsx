@@ -4,16 +4,15 @@ import ProjectCard from "../components/ProjectCard"
 const meta: Meta<typeof ProjectCard> = {
     title: "Components/ProjectCard",
     component: ProjectCard,
-    parameters: {
-        layout: "centered",
-    },
 }
 export default meta
 
 export const primary = () => {
     return (
         <div>
-            <ProjectCard />
+            <ProjectCard
+                project={{ image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" }}
+            />
         </div>
     )
 }

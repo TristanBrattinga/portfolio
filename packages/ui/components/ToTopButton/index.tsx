@@ -1,3 +1,5 @@
+"use client"
+
 import React, { useEffect, useState } from "react"
 import ChevronIcon from "../../icons/ChevronIcon"
 import clsx from "clsx"
@@ -32,7 +34,7 @@ const ToTopButton = () => {
                 onClick={() => {
                     window.scrollTo(0, 0)
                 }}
-                className={"flex justify-center items-center p-4 border border-white cursor-none"}
+                className={"flex justify-center items-center p-4 border border-white"}
             >
                 <ChevronIcon className={"rotate-90"} />
             </button>

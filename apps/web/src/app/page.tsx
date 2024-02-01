@@ -1,27 +1,31 @@
-import LanguageSwitcher from "ui/components/LanguageSwitcher"
-import PlainText from "ui/components/PlainText"
-import ProjectCard from "ui/components/ProjectCard"
-import TailwindIcon from "ui/icons/TailwindIcon"
+import ProjectList from "ui/components/ProjectList"
+import Button from "ui/components/Button"
+import Link from "next/link"
 
 export default function Page() {
     return (
-        <>
-            <div className="container">
-                <LanguageSwitcher />
-                <PlainText content="My name is Tristan Brattinga, I'm 24 years old and I'm a front-end developer! " />
-                <ProjectCard
-                    title="Project Title"
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel metus eu mauris volutpat
-                    consectetur ac a justo. In hac habitasse platea dictumst. Integer nec justo eget velit fermentum
-                    elementum. Curabitur eget justo non quam commodo vulputate. Duis eu ligula vel justo accumsan
-                    lacinia nec a velit. Curabitur eget tellus a leo iaculis auctor nec vel turpis. Sed eget risus at
-                    ipsum malesuada sollicitudin. Aliquam vestibulum ligula eget metus ultricies, sit amet consequat
-                    nunc scelerisque. Nullam ultricies nisl non ipsum finibus, et feugiat erat viverra."
-                    date={new Date()}
-                    image="/images/stock.jpg"
-                    techStack={[]}
-                />
-            </div>
-        </>
+        <div className="my-40">
+            <section className="container text-white flex flex-col items-center gap-4 my-20">
+                <h1 className="text-2xl md:text-5xl">Hi, my name is Tristan and I&apos;m 24 years old</h1>
+                <p className="text-center max-w-2xl">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <Button as={Link} href="/work" variant="primary">
+                    See all Projects
+                </Button>
+            </section>
+            <ProjectList
+                projects={[
+                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
+                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
+                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
+                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
+                ]}
+            />
+        </div>
     )
 }
