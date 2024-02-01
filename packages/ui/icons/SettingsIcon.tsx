@@ -1,7 +1,6 @@
 import React from "react"
-import { IconProps } from "../types/icon"
 
-const SettingsIcon: React.FC<IconProps> = ({ ...props }) => (
+const SettingsIcon: React.FC<React.SVGAttributes<SVGElement>> = ({ ...props }) => (
     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path
             d="M12.3288 17.6846C9.56876 17.6846 7.32876 15.4446 7.32876 12.6846C7.32876 9.92465 9.56876 7.68465 12.3288 7.68465C15.0888 7.68465 17.3288 9.92465 17.3288 12.6846C17.3288 15.4446 15.0888 17.6846 12.3288 17.6846ZM12.3288 9.68465C10.6788 9.68465 9.32876 11.0346 9.32876 12.6846C9.32876 14.3346 10.6788 15.6846 12.3288 15.6846C13.9788 15.6846 15.3288 14.3346 15.3288 12.6846C15.3288 11.0346 13.9788 9.68465 12.3288 9.68465Z"

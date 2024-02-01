@@ -1,6 +1,6 @@
-import { FC, SVGAttributes } from 'react'
+import React from "react"
 
-const LoadingIcon: FC<SVGAttributes<SVGElement>> = ({ ...props }) => (
+const LoadingIcon: React.FC<React.SVGAttributes<SVGElement>> = ({ ...props }) => (
     <svg
         width="30"
         height="30"

@@ -1,7 +1,6 @@
 import React from "react"
-import { IconProps } from "../types/icon"
 
-const GithubIcon: React.FC<IconProps> = ({ color = "black", ...props }) => (
+const GithubIcon: React.FC<React.SVGAttributes<SVGElement>> = ({ ...props }) => (
     <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
         <path
             fillRule="evenodd"
