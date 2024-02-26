@@ -1,7 +1,7 @@
 export default function Page() {
     return (
-        <>
-            <p className="font-nohemi text-white text-5xl font-light">Hello world</p>
-        </>
+        <div className="flex justify-center items-center h-screen">
+            <h1 className="font-ailerons text-white text-3xl md:text-6xl lg:text-[100px] comingSoon">Coming soon...</h1>
+        </div>
     )
 }
