@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 @layer base {
     * {
-        @apply antialiased font-raleway text-base
+        @apply antialiased font-raleway text-base text-white scroll-smooth
     }
 
     h1 {

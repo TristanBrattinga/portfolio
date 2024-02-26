@@ -13,3 +13,9 @@ export const ailerons = localFont({
     variable: "--font-ailerons",
     display: "swap",
 })
+
+export const nohemi = localFont({
+    src: "../../../../packages/ui/static/fonts/Nohemi-VF.ttf",
+    variable: "--font-nohemi",
+    display: "swap",
+})

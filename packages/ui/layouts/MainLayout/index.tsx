@@ -13,20 +13,20 @@ import InstagramIcon from "../../icons/InstagramIcon"
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <>
-            <Header />
+            {/*<Header />*/}
             <main>{children}</main>
-            <div className="hidden md:block">
-                <ToTopButton />
-            </div>
+            {/*<div className="hidden md:block">*/}
+            {/*    <ToTopButton />*/}
+            {/*</div>*/}
             {/*<Sidebar content={<></>}></Sidebar>*/}
             {/*<Cursor />*/}
-            <Footer
-                socialLinks={[
-                    { link: "https://github.com/TristanBrattinga", icon: <GithubIcon /> },
-                    { link: "https://www.linkedin.com/in/tristanbrattinga", icon: <LinkedinIcon /> },
-                    { link: "https://instagram.com/tristvnk", icon: <InstagramIcon /> },
-                ]}
-            />
+            {/*<Footer*/}
+            {/*    socialLinks={[*/}
+            {/*        { link: "https://github.com/TristanBrattinga", icon: <GithubIcon /> },*/}
+            {/*        { link: "https://www.linkedin.com/in/tristanbrattinga", icon: <LinkedinIcon /> },*/}
+            {/*        { link: "https://instagram.com/tristvnk", icon: <InstagramIcon /> },*/}
+            {/*    ]}*/}
+            {/*/>*/}
         </>
     )
 }

@@ -31,6 +31,7 @@ module.exports = {
             fontFamily: {
                 ailerons: ["var(--font-ailerons)", ...fontFamily.sans],
                 raleway: ["var(--font-raleway)", ...fontFamily.sans],
+                nohemi: ["var(--font-nohemi)", ...fontFamily.sans],
             },
             keyframes: {
                 slideDownAndFade: {
