@@ -1,8 +1,16 @@
 import * as React from "react"
 import "../styles/global.css"
-import "../fonts/champion.css"
-import "../fonts/satoshi.css"
 import { Preview } from "@storybook/react"
+import "swiper/css"
+import { raleway } from "web/src/lib/fonts"
+import localFont from "next/font/local"
+import { StoreProvider } from "web/src/lib/context/store-context"
+
+const ailerons = localFont({
+    src: "../fonts/Ailerons-Typeface.otf",
+    variable: "--font-ailerons",
+    display: "swap",
+})
 
 const preview: Preview = {
     parameters: {
@@ -30,7 +38,15 @@ const preview: Preview = {
             defaultValue: false, // Enable dark mode by default on all stories
         },
     },
-    decorators: [Story => <Story />],
+    decorators: [
+        Story => (
+            <div className={`${ailerons.variable} ${raleway.variable} scroll-smooth`}>
+                <StoreProvider>
+                    <Story />
+                </StoreProvider>
+            </div>
+        ),
+    ],
 }
 
 export default preview

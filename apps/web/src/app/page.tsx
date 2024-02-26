@@ -1,3 +1,7 @@
 export default function Page() {
-    return <div>Hello</div>
+    return (
+        <>
+            <p className="font-nohemi text-white text-5xl font-light">Hello world</p>
+        </>
+    )
 }

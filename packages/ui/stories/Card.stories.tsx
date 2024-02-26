@@ -1,4 +1,4 @@
-import { Card } from "../components/Card"
+import Card from "../components/Card"
 
 import Link from "next/link"
 import type { Meta } from "@storybook/react"
@@ -11,8 +11,8 @@ export default meta
 
 export const primary = () => {
     return (
-        <div className="m-10">
-            <Card />
+        <div>
+            <Card title="Webbers stage" image="/images/stock.jpg" />
         </div>
     )
 }

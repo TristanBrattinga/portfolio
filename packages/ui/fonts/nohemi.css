@@ -1,0 +1,10 @@
+@font-face {
+    font-family: "Nohemi";
+    font-style: normal;
+    font-display: swap;
+    src: url("../static/fonts/Nohemi-VF.ttf") format("truetype");
+}
+
+:root {
+    --font-nohemi: "Nohemi";
+}

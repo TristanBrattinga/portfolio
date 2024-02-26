@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily, screens } = require("tailwindcss/defaultTheme")
 
 module.exports = {
     mode: "jit",
@@ -8,30 +8,56 @@ module.exports = {
     },
     darkMode: "class",
     theme: {
-        fontSize: {
-            sm: ["14px"],
-            base: ["18px"],
-            xl: ["45px"],
-            "3xl": ["60px"],
+        screens: {
+            ...screens,
+            xl: "1440px",
         },
         container: {
             center: true,
-            padding: "20px",
-            screens: {
-                xl: "1440px",
+            padding: {
+                DEFAULT: "16px",
+                xl: "40px",
             },
         },
         extend: {
+            screens: {
+                lg: "1200px",
+                xl: "1440px",
+            },
+
             colors: {
-                dark: "#070707",
-                blue900new: "#0000FF",
-                blue900: "#253FE4",
+                "grey-base": "#202124",
             },
             fontFamily: {
-                satoshi: ["var(--font-satoshi)", ...fontFamily.sans],
-                champion: ["var(--font-champion)", ...fontFamily.sans],
+                ailerons: ["var(--font-ailerons)", ...fontFamily.sans],
+                raleway: ["var(--font-raleway)", ...fontFamily.sans],
+                nohemi: ["var(--font-nohemi)", ...fontFamily.sans],
+            },
+            keyframes: {
+                slideDownAndFade: {
+                    from: { opacity: 0, transform: "translateY(-2px)" },
+                    to: { opacity: 1, transform: "translateY(0)" },
+                },
+                slideLeftAndFade: {
+                    from: { opacity: 0, transform: "translateX(2px)" },
+                    to: { opacity: 1, transform: "translateX(0)" },
+                },
+                slideUpAndFade: {
+                    from: { opacity: 0, transform: "translateY(2px)" },
+                    to: { opacity: 1, transform: "translateY(0)" },
+                },
+                slideRightAndFade: {
+                    from: { opacity: 0, transform: "translateX(-2px)" },
+                    to: { opacity: 1, transform: "translateX(0)" },
+                },
+            },
+            animation: {
+                slideDownAndFade: "slideDownAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+                slideLeftAndFade: "slideLeftAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+                slideUpAndFade: "slideUpAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
+                slideRightAndFade: "slideRightAndFade 400ms cubic-bezier(0.16, 1, 0.3, 1)",
             },
         },
     },
     plugins: [],
-};
+}

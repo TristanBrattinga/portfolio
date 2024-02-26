@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "Ailerons";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url("../static/fonts/Ailerons-Typeface.otf") format("opentype");
+}
+
+:root {
+    --font-ailerons: "Ailerons";
+}
