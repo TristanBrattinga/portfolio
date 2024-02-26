@@ -10,12 +10,12 @@
   },
   "devDependencies": {
     "config": "*",
-    "eslint": "^8.50.0",
-    "prettier": "^3.0.3",
-    "turbo": "^1.10.14"
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.4"
   },
   "name": "portfolio",
-  "packageManager": "yarn@3.6.3",
+  "packageManager": "yarn@4.0.2",
   "workspaces": [
     "apps/*",
     "packages/*"
