@@ -73,7 +73,12 @@ const ContactForm = () => {
                 )}
             >
                 <div className="flex items-center gap-4 pl-4">
-                    <CheckmarkIcon color={success ? "green" : "red"} size={15} />
+                    <CheckmarkIcon
+                        className={clsx("", {
+                            "[&>path]:stroke-red-600": !success,
+                            "[&>path]:stroke-green-600": success,
+                        })}
+                    />
                     <p
                         className={clsx("text-sm", {
                             "text-green-800": success,
@@ -90,7 +95,12 @@ const ContactForm = () => {
                         "hover:bg-red-100": !success,
                     })}
                 >
-                    <CloseIcon size={15} color={success ? "#22c55e" : "#ef4444"} />
+                    <CloseIcon
+                        className={clsx("", {
+                            "#22c55e": success,
+                            "#ef4444": !success,
+                        })}
+                    />
                 </button>
             </div>
         </section>
