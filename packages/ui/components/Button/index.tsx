@@ -1,10 +1,8 @@
 "use client"
 
-import * as React from "react"
 import { createElement } from "react"
-import { ButtonProps, ButtonRenderComponent } from "./types"
+import { ButtonProps, ButtonRenderComponent, ButtonVariants } from "./types"
 import clsx from "clsx"
-import { buttonClasses } from "./classes"
 import LoadingIcon from "../../icons/LoadingIcon"
 
 const Button = <T extends ButtonRenderComponent>({
@@ -12,20 +10,18 @@ const Button = <T extends ButtonRenderComponent>({
     className,
     variant = "primary",
     loading = false,
-    addToCart,
-    hamburgerButton,
     disabled = false,
     onClick,
     children,
     ...props
 }: ButtonProps<T>) => {
     const typedProps: any = props
-    const disabledProps = loading || disabled ? "cursor-not-allowed" : "cursor-pointer"
 
-    typedProps.className = clsx(
-        `${disabledProps} disabled:opacity-50 ${buttonClasses(variant, disabled, loading)}`,
-        className,
-    )
+    const buttonVariants: Record<ButtonVariants, string> = {
+        primary: "btn-primary",
+    }
+
+    typedProps.className = clsx("btn", buttonVariants[variant], className)
 
     typedProps.onClick = (e: any) => {
         if (!loading && !disabled) {
@@ -33,7 +29,7 @@ const Button = <T extends ButtonRenderComponent>({
                 onClick(e)
             }
         } else {
-            e.preventDefault()
+            // e.preventDefault()
         }
     }
 

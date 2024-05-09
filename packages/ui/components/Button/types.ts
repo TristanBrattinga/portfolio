@@ -10,25 +10,14 @@ export type GetRenderComponentProps<T> = T extends React.ComponentType
 
 export type ButtonRenderComponent = "a" | "button" | typeof Link
 
-export type ButtonVariants =
-    | "primary"
-    | "secondary"
-    | "dark"
-    | "outlined"
-    | "white"
-    | "contact"
-    | "disabled"
-    | "selected"
-    | "social"
+export type ButtonVariants = "primary"
 
 export type ButtonProps<T extends ButtonRenderComponent> = {
     as?: ButtonRenderComponent
     className?: string
     onClick?: (e: any) => void
     loading?: boolean
-    addToCart?: boolean
     disabled?: boolean
-    hamburgerButton?: boolean
     variant?: ButtonVariants
     children?: ReactNode
 } & GetRenderComponentProps<T>

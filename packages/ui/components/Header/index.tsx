@@ -29,12 +29,8 @@ const Header = () => {
     }, [])
 
     return (
-        <header className={"fixed top-0 w-full"}>
-            <div
-                className={clsx(
-                    "flex group w-full fixed py-4 container justify-between items-center after:hidden lg:after:block after:absolute after:inset-x-0 after:bottom-0 after:h-[.5px] after:bg-white after:scale-x-0 after:transition-transform after:duration-300 after:hover:scale-x-100 after:origin-center",
-                )}
-            >
+        <header className="block sticky top-0 w-full">
+            <div className={clsx("container flex group py-4 w-full justify-between items-center")}>
                 <Link href={"/"}>
                     <h1
                         ref={ref}
@@ -51,11 +47,7 @@ const Header = () => {
                 </button>
                 <ul
                     className={clsx(
-                        "hidden ml-auto md:flex justify-between items-center gap-x-6 text-white font-semibold uppercase text-2xl translate-y-0 lg:-translate-y-12 lg:group-hover:translate-y-0 transition-all duration-300",
-                        {
-                            "translate-y-0": isScrolled,
-                            "-translate-y-12": !isScrolled,
-                        },
+                        "flex justify-between items-center gap-x-6 text-white font-semibold uppercase text-2xl",
                     )}
                 >
                     <li className={"hover:text-[#759FBC] hover:scale-125 transition-all duration-200"}>
@@ -68,14 +60,6 @@ const Header = () => {
                         <Link href={"/contact"}>Contact</Link>
                     </li>
                 </ul>
-                <ChevronIcon
-                    className={clsx(
-                        "hidden lg:block absolute right-40 -rotate-90 group-hover:opacity-0 transition-all duration-200 -z-10",
-                        {
-                            hidden: isScrolled,
-                        },
-                    )}
-                />
             </div>
         </header>
     )

@@ -15,11 +15,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
         <>
             <Header />
             <main>{children}</main>
-            <div className="hidden md:block">
-                <ToTopButton />
-            </div>
             <Sidebar content={<></>}></Sidebar>
-            <Cursor />
+            {/*<Cursor />*/}
             <Footer
                 socialLinks={[
                     { link: "https://github.com/TristanBrattinga", icon: <GithubIcon /> },
