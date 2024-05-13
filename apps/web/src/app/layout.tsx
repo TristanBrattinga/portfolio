@@ -1,4 +1,5 @@
 import "ui/styles/global.css"
+import "swiper/css"
 import React from "react"
 import MainLayout from "ui/layouts/MainLayout"
 import { ailerons, nohemi, raleway } from "@lib/fonts"

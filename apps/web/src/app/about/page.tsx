@@ -1,9 +1,10 @@
 import Image from "next/image"
 import Plaintext from "ui/components/PlainText"
+import WordCloud from "ui/components/WordCloud"
 
 export default function Page() {
     return (
-        <div className={"container py-12 "}>
+        <>
             <Plaintext
                 content="Last year I made the choice to go back to school because of the Corona pandemic. I was unemployed for a
                 while because of the lockdown and didn't know what to do. I chose to do Communication & Multimedia
@@ -19,6 +20,7 @@ export default function Page() {
                 perfectionist in everything I do. I can't do half work. Sometimes this can also be one of my flaws.
                 I sometimes tend to overdo things. I am a very social person who is not afraid to speak up. "
             />
-        </div>
+            <WordCloud words={["Nice", "Social", "Hard Working", "Nice", "Nice", "Social", "Hard Working", "Nice"]} />
+        </>
     )
 }

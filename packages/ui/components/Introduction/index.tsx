@@ -35,17 +35,17 @@ const Introduction = ({}) => {
                 <span className="arrow-down"></span>
             </div>
 
-            <h1 className="text-2xl md:text-4xl text-center">
+            <h2 className="text-2xl md:text-4xl text-center">
                 Hi, my name is Tristan and I&apos;m{" "}
                 <div
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    className="text-2xl md:text-4xl"
+                    className="text-2xl md:text-4xl w-fit mx-auto"
                 >
                     {age}
                 </div>{" "}
                 years old
-            </h1>
+            </h2>
             <p className="text-center max-w-2xl">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip

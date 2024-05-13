@@ -18,7 +18,7 @@ const Footer = ({ socialLinks }: FooterProps) => {
                         <li key={index} ref={ref} style={stagger(index, 200)} className={""}>
                             <Link
                                 href={social.link}
-                                className="block h-fit p-1.5 border border-white rounded-xl bg-white hover:-translate-y-1 hover:drop-shadow-md transition-all duration-200 ease-in-out"
+                                className="block h-fit p-1.5 border border-white rounded-xl bg-white hover:-translate-y-1 hover:drop-shadow-md transition-all duration-300 ease-in-out"
                             >
                                 {social.icon}
                             </Link>
