@@ -1,34 +1,34 @@
-import React from "react"
-import Link from "next/link"
-import { CardProps } from "./types"
-import Image from "next/image"
-import { stagger } from "../../utils/animations"
+import React from 'react'
+import Link from 'next/link'
+import { CardProps } from './types'
+import Image from 'next/image'
+import { stagger } from '../../utils/animations'
 
 const Card = ({ title, image }: CardProps) => {
     return (
         <div style={stagger(100)} className="relative w-fit group">
             <div
                 className={
-                    "w-fit flex justify-center items-center relative overflow-hidden transition-all duration-500 cursor-pointer"
+                    'w-fit flex justify-center items-center relative overflow-hidden transition-all duration-500 cursor-pointer'
                 }
             >
                 <h2
                     className={
-                        "text-2xl absolute z-20 uppercase font-bold text-white group-hover:opacity-0 group-hover:translate-y-20  transition-all duration-300"
+                        'text-2xl absolute z-20 uppercase font-bold text-clr-text group-hover:opacity-0 group-hover:translate-y-20  transition-all duration-300'
                     }
                 >
                     {title}
                 </h2>
                 <Image
                     src={image}
-                    alt={""}
+                    alt={''}
                     width={400}
                     height={600}
                     className="group-hover:scale-110 transition-all duration-500 opacity-75 group-hover:opacity-100"
                 />
                 <h2
                     className={
-                        "text-2xl absolute z-20 bottom-10 uppercase font-bold text-white opacity-0 group-hover:opacity-100  transition-all duration-[400ms]"
+                        'text-2xl absolute z-20 bottom-10 uppercase font-bold text-clr-text opacity-0 group-hover:opacity-100  transition-all duration-[400ms]'
                     }
                 >
                     {title}

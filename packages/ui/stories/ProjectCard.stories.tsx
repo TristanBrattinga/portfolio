@@ -9,7 +9,7 @@ export default meta
 
 export const primary = () => {
     return (
-        <div>
+        <div className="container max-w-2xl">
             <ProjectCard
                 project={{ image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" }}
             />

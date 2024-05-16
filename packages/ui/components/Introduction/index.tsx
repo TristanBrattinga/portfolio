@@ -1,10 +1,10 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import Button from "../Button"
-import Link from "next/link"
-import clsx from "clsx"
-import { slideInTop, useAnimations } from "../../utils/animations"
+import { useEffect, useState } from 'react'
+import Button from '../Button'
+import Link from 'next/link'
+import clsx from 'clsx'
+import { slideInTop, useAnimations } from '../../utils/animations'
 
 const Introduction = ({}) => {
     const { ref, inView } = useAnimations()
@@ -12,7 +12,7 @@ const Introduction = ({}) => {
     const [isHovered, setIsHovered] = useState(false)
 
     useEffect(() => {
-        const birthday = new Date("1999-07-11")
+        const birthday = new Date('1999-07-11')
         const today = new Date()
 
         let updateAge = today.getFullYear() - birthday.getFullYear() - 1
@@ -25,10 +25,10 @@ const Introduction = ({}) => {
     }, [age])
 
     return (
-        <section className="container text-white flex flex-col items-center gap-4 my-20">
+        <section className="container flex flex-col items-center gap-4 my-20">
             <div
-                className={clsx("bg-white py-2 px-4 rounded-md absolute", slideInTop(isHovered), {
-                    "!-translate-y-[10px]": !isHovered,
+                className={clsx('bg-white py-2 px-4 rounded-md absolute', slideInTop(isHovered), {
+                    '!-translate-y-[10px]': !isHovered,
                 })}
             >
                 <p className="text-black font-medium">Yes this updates!</p>
@@ -36,14 +36,14 @@ const Introduction = ({}) => {
             </div>
 
             <h2 className="text-2xl md:text-4xl text-center">
-                Hi, my name is Tristan and I&apos;m{" "}
+                Hi, my name is Tristan and I&apos;m{' '}
                 <div
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                     className="text-2xl md:text-4xl w-fit mx-auto"
                 >
                     {age}
-                </div>{" "}
+                </div>{' '}
                 years old
             </h2>
             <p className="text-center max-w-2xl">

@@ -3,18 +3,37 @@
 @tailwind utilities;
 
 
-
 @layer base {
+    /*:root {*/
+    /*    --text: #0c0d0e;*/
+    /*    --background: #e7ecee;*/
+    /*    --primary: #2f4751;*/
+    /*    --secondary: #96c0cf;*/
+    /*    --accent: #3d88a4;*/
+    /*}*/
+
+    :root {
+        --text: #f1f2f3;
+        --background: #111618;
+        --primary: #aec6d0;
+        --secondary: #305a69;
+        --accent: #5ba7c2;
+    }
+
     * {
-        @apply antialiased font-raleway text-base text-white scroll-smooth
+        @apply antialiased font-raleway text-base text-clr-text scroll-smooth
+    }
+
+    body {
+        @apply bg-clr-background min-h-screen flex flex-col
+    }
+
+    main {
+        @apply flex-grow
     }
 
     h1 {
         @apply font-ailerons
-    }
-
-    body {
-        @apply bg-grey-base
     }
 
     .btn {
@@ -22,28 +41,28 @@
     }
 
     .btn-primary {
-        @apply text-white border border-white hover:bg-white hover:text-grey-base
+        @apply text-clr-background bg-clr-primary border border-clr-primary hover:bg-transparent hover:text-clr-text
     }
-}
 
-.flip-card {
-    perspective: 1000px;
-}
+    .btn-secondary {
+        @apply text-clr-text bg-clr-secondary border border-clr-secondary hover:bg-transparent
+    }
 
-.flip-card-inner {
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
+    .btn-accent {
+        @apply text-clr-background bg-clr-accent border border-clr-accent hover:bg-transparent hover:text-clr-text
+    }
 
-.flip-card-front,
+    .btn-white {
+        @apply text-clr-background border border-white bg-white hover:bg-transparent hover:text-clr-text
+    }
 
-.flip-card-back {
-    position: absolute;
-    backface-visibility: hidden;
-}
+    .btn-outlined {
+        @apply text-clr-text border border-white hover:bg-white hover:text-clr-background
+    }
 
-.flip-card-back {
-    transform: rotateY(180deg);
+    .btn-social {
+        @apply p-2 border border-clr-accent bg-clr-accent hover:-translate-y-1 hover:drop-shadow-md
+    }
 }
 
 @keyframes rotateGradient {
@@ -100,18 +119,5 @@
     input[type="search"]::-webkit-search-results-button,
     input[type="search"]::-webkit-search-results-decoration {
         -webkit-appearance: none;
-    }
-}
-
-.comingSoon {
-    animation: pulseOwn 5s infinite ease;
-}
-
-@keyframes pulseOwn {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0.5;
     }
 }

@@ -24,9 +24,12 @@ module.exports = {
                 lg: "1200px",
                 xl: "1440px",
             },
-
             colors: {
-                "grey-base": "#202124",
+                "clr-text": "var(--text)",
+                "clr-background": "var(--background)",
+                "clr-primary": "var(--primary)",
+                "clr-secondary": "var(--secondary)",
+                "clr-accent": "var(--accent)",
             },
             fontFamily: {
                 ailerons: ["var(--font-ailerons)", ...fontFamily.sans],

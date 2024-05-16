@@ -1,7 +1,7 @@
-"use client"
+'use client'
 
-import { motion } from "framer-motion"
-import React, { useEffect, useState } from "react"
+import { motion } from 'framer-motion'
+import React, { useEffect, useState } from 'react'
 
 const Cursor = () => {
     const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -23,10 +23,10 @@ const Cursor = () => {
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
+        window.addEventListener('scroll', handleScroll)
 
         return () => {
-            window.removeEventListener("scroll", handleScroll)
+            window.removeEventListener('scroll', handleScroll)
         }
     }, [])
 
@@ -34,9 +34,9 @@ const Cursor = () => {
         const handleMouseMove = (e: any) => {
             setMousePosition({ x: e.clientX, y: e.clientY })
         }
-        window.addEventListener("mousemove", handleMouseMove)
+        window.addEventListener('mousemove', handleMouseMove)
         return () => {
-            window.removeEventListener("mousemove", handleMouseMove)
+            window.removeEventListener('mousemove', handleMouseMove)
         }
     })
 
@@ -44,7 +44,7 @@ const Cursor = () => {
         default: {
             x: mousePosition.x - 20,
             y: mousePosition.y - 20,
-            transition: { duration: 0, type: "spring", stiffness: 100, damping: 20 },
+            transition: { duration: 0, type: 'spring', stiffness: 100, damping: 20 },
         },
     }
 
@@ -62,7 +62,7 @@ const Cursor = () => {
                 <svg className="circle-container">
                     <circle className="circle" cx="50%" cy="50%" r="20" style={circleStyle}></circle>
                 </svg>
-                <div className="fixed text-white font-bold text-lg left-8 bottom-8">{scrollPercentage}%</div>
+                <div className="fixed text-clr-text font-bold text-lg left-8 bottom-8">{scrollPercentage}%</div>
             </motion.div>
         </>
     )

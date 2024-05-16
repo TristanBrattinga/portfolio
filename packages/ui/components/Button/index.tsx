@@ -1,14 +1,14 @@
-"use client"
+'use client'
 
-import { createElement } from "react"
-import { ButtonProps, ButtonRenderComponent, ButtonVariants } from "./types"
-import clsx from "clsx"
-import LoadingIcon from "../../icons/LoadingIcon"
+import { createElement } from 'react'
+import { ButtonProps, ButtonRenderComponent, ButtonVariants } from './types'
+import clsx from 'clsx'
+import LoadingIcon from '../../icons/LoadingIcon'
 
 const Button = <T extends ButtonRenderComponent>({
-    as = "button",
+    as = 'button',
     className,
-    variant = "primary",
+    variant = 'primary',
     loading = false,
     disabled = false,
     onClick,
@@ -18,10 +18,15 @@ const Button = <T extends ButtonRenderComponent>({
     const typedProps: any = props
 
     const buttonVariants: Record<ButtonVariants, string> = {
-        primary: "btn-primary",
+        primary: 'btn-primary',
+        secondary: 'btn-secondary',
+        accent: 'btn-accent',
+        white: 'btn-white',
+        outlined: 'btn-outlined',
+        social: 'btn-social',
     }
 
-    typedProps.className = clsx("btn", buttonVariants[variant], className)
+    typedProps.className = clsx('btn', buttonVariants[variant], className)
 
     typedProps.onClick = (e: any) => {
         if (!loading && !disabled) {

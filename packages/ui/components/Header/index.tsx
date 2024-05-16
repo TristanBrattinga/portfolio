@@ -1,12 +1,12 @@
-"use client"
+'use client'
 
-import Link from "next/link"
-import ChevronIcon from "../../icons/ChevronIcon"
-import { useEffect, useState } from "react"
-import clsx from "clsx"
-import HamburgerMenuIcon from "../../icons/HamburgerMenuIcon"
-import { useStore } from "web/src/lib/context/store-context"
-import { slideInLeft, useAnimations } from "../../utils/animations"
+import Link from 'next/link'
+import ChevronIcon from '../../icons/ChevronIcon'
+import { useEffect, useState } from 'react'
+import clsx from 'clsx'
+import HamburgerMenuIcon from '../../icons/HamburgerMenuIcon'
+import { useStore } from 'web/src/lib/context/store-context'
+import { slideInLeft, useAnimations } from '../../utils/animations'
 
 const Header = () => {
     const { ref, inView } = useAnimations()
@@ -22,20 +22,25 @@ const Header = () => {
     }
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll)
+        window.addEventListener('scroll', handleScroll)
         return () => {
-            window.removeEventListener("scroll", handleScroll)
+            window.removeEventListener('scroll', handleScroll)
         }
     }, [])
 
     return (
-        <header className="block sticky top-0 w-full">
-            <div className={clsx("container flex group py-4 w-full justify-between items-center")}>
-                <Link href={"/"}>
+        <header
+            className={clsx('block sticky top-0 w-full transition-all duration-300', {
+                'bg-black/25': isScrolled,
+                'bg-transparent': !isScrolled,
+            })}
+        >
+            <div className={clsx('container flex group py-4 w-full justify-between items-center')}>
+                <Link href={'/'}>
                     <h1
                         ref={ref}
                         className={clsx(
-                            "text-start lg:text-center font-ailerons text-2xl md:text-3xl lg:text-4xl text-white",
+                            'text-start lg:text-center font-ailerons text-2xl md:text-3xl lg:text-4xl',
                             slideInLeft(inView),
                         )}
                     >
@@ -45,19 +50,15 @@ const Header = () => {
                 <button onClick={() => openMenu()} className=" md:hidden">
                     <HamburgerMenuIcon />
                 </button>
-                <ul
-                    className={clsx(
-                        "flex justify-between items-center gap-x-6 text-white font-semibold uppercase text-2xl",
-                    )}
-                >
-                    <li className={"hover:text-[#759FBC] hover:scale-125 transition-all duration-200"}>
-                        <Link href={"/work"}>Work</Link>
+                <ul className={clsx('flex justify-between items-center gap-x-6 font-semibold uppercase text-2xl')}>
+                    <li className={'hover:text-clr-accent transition-all duration-200'}>
+                        <Link href={'/work'}>Work</Link>
                     </li>
-                    <li className={"hover:text-[#759FBC] transition-colors duration-200"}>
-                        <Link href={"/about"}>About</Link>
+                    <li className={'hover:text-clr-accent transition-colors duration-200'}>
+                        <Link href={'/about'}>About</Link>
                     </li>
-                    <li className={"hover:text-[#759FBC] transition-colors duration-200"}>
-                        <Link href={"/contact"}>Contact</Link>
+                    <li className={'hover:text-clr-accent transition-colors duration-200'}>
+                        <Link href={'/contact'}>Contact</Link>
                     </li>
                 </ul>
             </div>

@@ -1,8 +1,8 @@
-"use client"
+'use client'
 
-import { useEffect, useState } from "react"
-import { languages } from "../../data/hello"
-import * as Tooltip from "@radix-ui/react-tooltip"
+import { useEffect, useState } from 'react'
+import { languages } from '../../data/hello'
+import * as Tooltip from '@radix-ui/react-tooltip'
 
 const LanguageSwitcher = () => {
     const [currentLanguageIndex, setCurrentLanguageIndex] = useState(0)
@@ -23,7 +23,7 @@ const LanguageSwitcher = () => {
         <div className="my-20">
             <Tooltip.Provider>
                 <Tooltip.Root>
-                    <h1 className="text-white text-5xl pointer-default text-center">
+                    <h1 className="text-5xl pointer-default text-center">
                         <Tooltip.Trigger className="w-60">
                             {getTitleForCurrentLanguage().hello.toString()}
                         </Tooltip.Trigger>

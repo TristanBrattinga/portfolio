@@ -10,7 +10,7 @@ export default meta
 
 export const primary = () => {
     return (
-        <div>
+        <div className="container mt-20">
             <ContactForm />
         </div>
     )
