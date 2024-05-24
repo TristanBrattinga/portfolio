@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
     /*:root {*/
     /*    --text: #0c0d0e;*/
@@ -25,7 +24,7 @@
     }
 
     body {
-        @apply bg-clr-background min-h-screen flex flex-col
+        @apply bg-clr-background flex flex-col
     }
 
     main {
@@ -88,6 +87,29 @@
     stroke-dasharray: 0 100;
     transition: stroke-dasharray 0.3s linear;
 }
+
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(10px, -10px);
+    }
+    50% {
+        transform: translate(-10px, 10px);
+    }
+    75% {
+        transform: translate(10px, 10px);
+    }
+    100% {
+        transform: translate(-10px, -10px);
+    }
+}
+
+.border-animation {
+    animation: float 5s infinite alternate ease-in-out;
+}
+
 
 @layer utilities {
     input:focus ~ label,

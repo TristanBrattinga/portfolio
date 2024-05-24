@@ -13,7 +13,14 @@ import InstagramIcon from '../../icons/InstagramIcon'
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <>
-            <Header />
+            <Header
+                links={[
+                    { link: '/', label: 'Home' },
+                    { link: '/work', label: 'Work' },
+                    { link: '/about', label: 'About' },
+                    { link: '/contact', label: 'Contact' },
+                ]}
+            />
             <main>{children}</main>
             <Footer
                 socialLinks={[

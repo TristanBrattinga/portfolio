@@ -7,7 +7,7 @@ import Input from '../FormFields/Input'
 import Button from '../Button'
 import clsx from 'clsx'
 import CloseIcon from '../../icons/CloseIcon'
-import { slideInBottom, slideInLeft, slideInTop, useAnimations } from '../../utils/animations'
+import { slideInBottom, useAnimations } from '../../utils/animations'
 import { useState } from 'react'
 import CheckmarkIcon from '../../icons/CheckmarkIcon'
 
@@ -48,11 +48,15 @@ const ContactForm = () => {
 
     return (
         <section className="container my-12 lg:my-36">
-            <h1 ref={ref} className={clsx('text-clr-text text-5xl mb-10', slideInLeft(inView))}>
+            <h1 ref={ref} className={clsx('text-clr-text text-5xl mb-10', slideInBottom(inView))}>
                 Say Hi
             </h1>
             <FormProvider {...methods}>
-                <form ref={ref} id="contactForm" className={clsx('flex flex-col gap-4', slideInTop(inView))}>
+                <form
+                    ref={ref}
+                    id="contactForm"
+                    className={clsx('flex flex-col gap-4 max-w-sm', slideInBottom(inView))}
+                >
                     <Input {...methods.register('firstName')} label={'test'} placeholder={'First name'} required />
                     <Input {...methods.register('lastName')} label={'test'} placeholder={'Last name'} required />
                     <Input {...methods.register('email')} label={'test'} placeholder={'Email address'} required />

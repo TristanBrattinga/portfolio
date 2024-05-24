@@ -25,37 +25,49 @@ const Introduction = ({}) => {
     }, [age])
 
     return (
-        <section className="container flex flex-col items-center gap-4 my-20">
-            <div
-                className={clsx('bg-white py-2 px-4 rounded-md absolute', slideInTop(isHovered), {
-                    '!-translate-y-[10px]': !isHovered,
-                })}
-            >
-                <p className="text-black font-medium">Yes this updates!</p>
-                <span className="arrow-down"></span>
-            </div>
-
-            <h2 className="text-2xl md:text-4xl text-center">
+        <section className="my-20">
+            <h2 className="text-2xl md:text-4xl">
                 Hi, my name is Tristan and I&apos;m{' '}
-                <div
+                <span
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
-                    className="text-2xl md:text-4xl w-fit mx-auto"
+                    className="text-2xl md:text-4xl w-fit inline relative"
                 >
                     {age}
-                </div>{' '}
+                    <div
+                        className={clsx(
+                            'bg-white py-2 px-4 rounded-md absolute right-0 top-0 w-fit',
+                            slideInTop(isHovered),
+                            {
+                                '!-translate-y-[10px]': !isHovered,
+                            },
+                        )}
+                    >
+                        <p className="text-black font-medium">Yes this updates!</p>
+                        <span className="arrow-down"></span>
+                    </div>
+                </span>{' '}
                 years old
             </h2>
-            <p className="text-center max-w-2xl">
+            <p className="max-w-2xl mt-6 -ml-10">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
                 fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.
             </p>
-            <Button as={Link} href="/work" variant="primary">
-                See all Projects
-            </Button>
+            <ul className="flex gap-2 justify-end mt-10">
+                <li>
+                    <Button as={Link} href="/work" variant="outlined">
+                        See my Work
+                    </Button>
+                </li>
+                <li>
+                    <Button as={Link} href="/work" variant="primary">
+                        Learn more about Me
+                    </Button>
+                </li>
+            </ul>
         </section>
     )
 }

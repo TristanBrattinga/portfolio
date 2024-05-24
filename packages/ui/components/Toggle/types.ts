@@ -1,3 +1,3 @@
 export type ToggleProps = {
-    label: string
+    label?: string
 }
