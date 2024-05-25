@@ -63,8 +63,8 @@ const Introduction = ({}) => {
                     </Button>
                 </li>
                 <li>
-                    <Button as={Link} href="/work" variant="primary">
-                        Learn more about Me
+                    <Button as={Link} href="/about" variant="primary">
+                        Learn more about me
                     </Button>
                 </li>
             </ul>
