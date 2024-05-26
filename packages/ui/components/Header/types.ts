@@ -1,8 +1,9 @@
-export type Header2Props = {
+export type HeaderProps = {
+    logoText: string
     links: LinkType[]
 }
 
-type LinkType = {
+export type LinkType = {
     label: string
     link: string
 }

@@ -1,6 +1,6 @@
-const body = typeof document !== "undefined" ? document.querySelector("body") : null
+const body = typeof document !== 'undefined' ? document.querySelector('body') : null
 
-let scrollPosition = 0
+let scrollPosition
 
 export const scrollLock = {
     enable() {
@@ -13,5 +13,5 @@ export const scrollLock = {
         if (body) {
             body.style.removeProperty('overflow')
         }
-    }
+    },
 }

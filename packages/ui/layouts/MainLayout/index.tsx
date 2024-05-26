@@ -1,19 +1,18 @@
 import * as React from 'react'
 import type { MainLayoutProps } from './types'
 import Header from '../../components/Header'
-import ToTopButton from '../../components/ToTopButton'
-import { Sidebar } from '../../components/Sidebar'
-import { useStore } from 'web/src/lib/context/store-context'
-import Cursor from '../../components/Cursor'
+import Menu from '../../components/Menu'
 import Footer from '../../components/Footer'
 import GithubIcon from '../../icons/GithubIcon'
 import LinkedinIcon from '../../icons/LinkedinIcon'
 import InstagramIcon from '../../icons/InstagramIcon'
+import ProgressBar from '../../components/ProgressBar'
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
         <>
             <Header
+                logoText="Tristan Brattinga"
                 links={[
                     { link: '/', label: 'Home' },
                     { link: '/work', label: 'Work' },
@@ -22,6 +21,8 @@ const MainLayout = ({ children }: MainLayoutProps) => {
                 ]}
             />
             <main>{children}</main>
+            <Menu />
+            <ProgressBar />
             <Footer
                 socialLinks={[
                     { link: 'https://github.com/TristanBrattinga', icon: <GithubIcon /> },

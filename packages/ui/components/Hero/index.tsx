@@ -27,8 +27,8 @@ const Hero = () => {
     }, [])
 
     return (
-        <section className="flex container my-12 lg:my-36 gap-10">
-            <div className="w-1/2">
+        <section className="flex container my-12 lg:my-36 lg:mb-24 gap-10">
+            <div className="hidden md:block w-1/2">
                 <div className="relative w-fit mx-auto">
                     {styles.length > 0 && (
                         <>

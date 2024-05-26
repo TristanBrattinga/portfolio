@@ -15,7 +15,7 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
                 // slidesPerView={1}
                 spaceBetween={300}
                 modules={[EffectFade, Autoplay]}
-                // speed={500}
+                speed={1000}
                 autoplay={{ delay: 10000 }}
                 className="w-full max-w-80"
             >
