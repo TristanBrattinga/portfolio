@@ -41,8 +41,6 @@ const Header = ({ links, logoText }: HeaderProps) => {
                             )}
                         >
                             {logoText.split('').map((char, index) => {
-                                console.log(char, 'letter')
-                                console.log(index, 'index')
                                 return (
                                     <span
                                         key={index}

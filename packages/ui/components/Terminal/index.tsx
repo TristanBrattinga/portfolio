@@ -15,8 +15,6 @@ const Terminal = () => {
                     const lastLine = prevOutput[prevOutput.length - 1] || ''
                     const updatedLastLine = lastLine.substring(0, lastLine.length - 9) + welcomeMessage[i]
 
-                    console.log(updatedLastLine)
-
                     return [...prevOutput.slice(0, prevOutput.length - 1), updatedLastLine]
                 })
                 i++
