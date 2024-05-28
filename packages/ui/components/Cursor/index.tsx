@@ -56,7 +56,7 @@ const Cursor = () => {
             <motion.div
                 variants={variants}
                 animate="default"
-                className="hidden fixed lg:flex justify-center items-center top-0 left-0 w-10 h-10 pointer-events-none"
+                className="hidden fixed lg:flex justify-center items-center top-0 left-0 w-10 h-10 pointer-events-none z-[9999]"
             >
                 <div className="bg-red-500 h-1 w-1"></div>
                 <svg className="circle-container">

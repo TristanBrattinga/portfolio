@@ -2,7 +2,7 @@ export type ImageSliderProps = {
     images: ImageType[]
 }
 
-type ImageType = {
+export type ImageType = {
     src: string
     alt: string
     width?: number

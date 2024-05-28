@@ -7,6 +7,7 @@ import GithubIcon from '../../icons/GithubIcon'
 import LinkedinIcon from '../../icons/LinkedinIcon'
 import InstagramIcon from '../../icons/InstagramIcon'
 import ProgressBar from '../../components/ProgressBar'
+import Cursor from '../../components/Cursor'
 
 const MainLayout = ({ children }: MainLayoutProps) => {
     return (
@@ -23,6 +24,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <main>{children}</main>
             <Menu />
             <ProgressBar />
+            <Cursor />
             <Footer
                 socialLinks={[
                     { link: 'https://github.com/TristanBrattinga', icon: <GithubIcon /> },

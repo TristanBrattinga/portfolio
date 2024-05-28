@@ -38,6 +38,7 @@ const Menu = ({}: MenuProps) => {
             <ul className="fixed right-0 top-0 z-20 [&>li:nth-of-type(1)]:p-56 [&>li:nth-of-type(1)]:bg-clr-secondary [&>li:nth-of-type(2)]:bg-clr-accent [&>li:nth-of-type(3)]:bg-clr-primary [&>li:nth-of-type(2)]:p-64 [&>li:nth-of-type(3)]:p-72 [&>li:nth-of-type(1)]:z-30 [&>li:nth-of-type(2)]:z-20 [&>li]:absolute [&>li]:right-0 [&>li]:top-0 [&>li]:rounded-bl-full">
                 {items.map(index => (
                     <li
+                        key={index}
                         style={stagger(index, menuIsShown ? 100 : 25)}
                         className={clsx('', sidebarSlideIn(menuIsShown))}
                     ></li>

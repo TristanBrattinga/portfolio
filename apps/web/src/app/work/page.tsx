@@ -1,4 +1,4 @@
-import ProjectList from "ui/components/ProjectList"
+import ProjectList from 'ui/components/ProjectList'
 
 export default function Page() {
     return (
@@ -6,34 +6,47 @@ export default function Page() {
             <ProjectList
                 projects={[
                     {
-                        image: "/images/stock.jpg",
-                        title: "Introduction to Programming",
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
                         date: new Date(),
-                        description: "Test test",
+                        description: 'This is the project description',
                     },
                     {
-                        image: "/images/stock.jpg",
-                        title: "Internet Standards",
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
                         date: new Date(),
-                        description: "Test test",
+                        description: 'This is the project description',
                     },
                     {
-                        image: "/images/stock.jpg",
-                        title: "Front-end Development 1",
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
                         date: new Date(),
-                        description: "Test test",
+                        description: 'This is the project description',
                     },
                     {
-                        image: "/images/stock.jpg",
-                        title: "ISGA Individual Project",
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
                         date: new Date(),
-                        description: "Test test",
+                        description: 'This is the project description',
                     },
-                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
-                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
-                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
-                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
-                    { image: "/images/stock.jpg", title: "Project", date: new Date(), description: "Test test" },
+                    {
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
+                        date: new Date(),
+                        description: 'This is the project description',
+                    },
+                    {
+                        image: { src: '/images/stock.jpg', alt: '' },
+                        link: { link: '', label: '' },
+                        title: 'Project',
+                        date: new Date(),
+                        description: 'This is the project description',
+                    },
                 ]}
             />
         </>

@@ -14,10 +14,7 @@ const ProgressBar = ({}: ProgressBarProps) => {
 
     return (
         <>
-            <motion.div
-                className="fixed top-0 right-0 origin-top h-screen w-1 lg:w-2.5 bg-clr-accent"
-                style={{ scaleY }}
-            />
+            <motion.div className="fixed top-0 right-0 origin-top h-screen w-1 bg-clr-accent" style={{ scaleY }} />
         </>
     )
 }
