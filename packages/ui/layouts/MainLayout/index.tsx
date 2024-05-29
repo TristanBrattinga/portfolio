@@ -24,7 +24,7 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <main>{children}</main>
             <Menu />
             <ProgressBar />
-            <Cursor />
+            {/*<Cursor />*/}
             <Footer
                 socialLinks={[
                     { link: 'https://github.com/TristanBrattinga', icon: <GithubIcon /> },

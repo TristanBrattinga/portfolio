@@ -6,7 +6,7 @@ import Image from 'next/image'
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
 
-const ProjectCard = ({ project, size }: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
     const [randomNumber, setRandomNumber] = useState<number>()
 
     const randomizer = () => {
@@ -18,14 +18,7 @@ const ProjectCard = ({ project, size }: ProjectCardProps) => {
     }, [])
 
     return (
-        <Link
-            href={project.link?.link || ''}
-            className={clsx('block relative group', {
-                'w-[350px]': size === 'small',
-                'w-[450px]': size === 'medium',
-                'w-[800px]': size === 'large',
-            })}
-        >
+        <Link href={`/work/${project.link?.link}` || ''} className={clsx('block relative group w-full')}>
             <Image
                 src={project.image.src}
                 alt={project.image.alt}

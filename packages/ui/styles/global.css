@@ -24,6 +24,7 @@
         display: none;
     }
 
+
     * {
         @apply antialiased font-raleway text-base text-clr-text scroll-smooth
     }

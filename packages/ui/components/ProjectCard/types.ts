@@ -1,9 +1,9 @@
 import { ImageType } from '../ImageSlider/types'
 import { LinkType } from '../Header/types'
+import { ReactNode } from 'react'
 
 export type ProjectCardProps = {
     project: ProjectType
-    size: 'small' | 'medium' | 'large'
 }
 
 export type ProjectType = {
@@ -11,5 +11,7 @@ export type ProjectType = {
     description: string
     image: ImageType
     date: Date
-    link: LinkType
+    link?: LinkType
+    icons?: ReactNode[]
+    size: 'small' | 'medium' | 'large'
 }

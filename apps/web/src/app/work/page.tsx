@@ -11,6 +11,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'large',
                     },
                     {
                         image: { src: '/images/stock.jpg', alt: '' },
@@ -18,6 +19,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'small',
                     },
                     {
                         image: { src: '/images/stock.jpg', alt: '' },
@@ -25,6 +27,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'medium',
                     },
                     {
                         image: { src: '/images/stock.jpg', alt: '' },
@@ -32,6 +35,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'medium',
                     },
                     {
                         image: { src: '/images/stock.jpg', alt: '' },
@@ -39,6 +43,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'small',
                     },
                     {
                         image: { src: '/images/stock.jpg', alt: '' },
@@ -46,6 +51,7 @@ export default function Page() {
                         title: 'Project',
                         date: new Date(),
                         description: 'This is the project description',
+                        size: 'small',
                     },
                 ]}
             />

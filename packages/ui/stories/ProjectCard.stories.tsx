@@ -1,5 +1,8 @@
 import type { Meta } from '@storybook/react'
 import ProjectCard from '../components/ProjectCard'
+import TailwindIcon from '../icons/TailwindIcon'
+import NextJsIcon from '../icons/NextJsIcon'
+import StorybookIcon from '../icons/StorybookIcon'
 
 const meta: Meta<typeof ProjectCard> = {
     title: 'Components/ProjectCard',
@@ -16,8 +19,9 @@ export const primary = () => {
                 title: 'Project',
                 date: new Date(),
                 description: 'This is the project description',
+                icons: [<TailwindIcon />, <StorybookIcon />],
             }}
-            size="large"
+            size="medium"
         />
     )
 }
