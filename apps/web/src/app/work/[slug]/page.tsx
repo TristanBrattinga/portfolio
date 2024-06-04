@@ -1,15 +1,13 @@
-async function getProjects() {
-    const res = await fetch('')
+import ProjectSidebar from 'ui/components/ProjectSidebar'
+import React from 'react'
+import ProjectList from 'ui/components/ProjectList'
+import { ProjectType } from 'ui/components/ProjectCard/types'
 
-    if (!res.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    return res.json()
-}
-
-export default async function Page() {
-    const data = await getProjects()
-
-    return <></>
+export default async function Page({ projects }: { projects: ProjectType[] }) {
+    return (
+        <section className="container flex gap-12 my-12 lg:my-36">
+            <ProjectSidebar projects={projects} />
+            <ProjectList projects={[]} />
+        </section>
+    )
 }
