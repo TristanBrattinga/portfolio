@@ -43,6 +43,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.4.2",
+    "@radix-ui/react-switch": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
     "@storybook/nextjs": "^8.1.5",
     "clsx": "^2.1.1",

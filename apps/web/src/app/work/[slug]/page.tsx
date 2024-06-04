@@ -1,68 +1,15 @@
-import ProjectList from 'ui/components/ProjectList'
+async function getProjects() {
+    const res = await fetch('')
 
-export default function Page() {
-    return (
-        <>
-            <ProjectList
-                projects={[
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'large',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'medium',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'medium',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                ]}
-            />
-        </>
-    )
+    if (!res.ok) {
+        throw new Error('Failed to fetch data')
+    }
+
+    return res.json()
+}
+
+export default async function Page() {
+    const data = await getProjects()
+
+    return <></>
 }

@@ -5,7 +5,7 @@ import clsx from 'clsx'
 const ProjectList = ({ projects }: ProjectListProps) => {
     return (
         <section className="">
-            <ul className="flex flex-wrap">
+            <ul className="flex flex-wrap gap-5">
                 {projects?.map((project, index) => (
                     <li
                         key={index}

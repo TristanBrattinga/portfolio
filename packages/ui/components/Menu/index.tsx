@@ -8,6 +8,8 @@ import { useMenu } from 'web/src/lib/context/menu-context'
 import { sidebarSlideIn, stagger } from '../../utils/animations'
 import { handleEscKeyPress } from '../../utils/handleEscKeyPress'
 
+import * as Switch from '@radix-ui/react-switch'
+
 const Menu = ({}: MenuProps) => {
     const { menuIsShown, closeMenu } = useMenu()
     const items = [1, 2, 3]
@@ -41,7 +43,11 @@ const Menu = ({}: MenuProps) => {
                         key={index}
                         style={stagger(index, menuIsShown ? 100 : 25)}
                         className={clsx('', sidebarSlideIn(menuIsShown))}
-                    ></li>
+                    >
+                        {/*<Switch.Root>*/}
+                        {/*    <Switch.Thumb />*/}
+                        {/*</Switch.Root>*/}
+                    </li>
                 ))}
             </ul>
         </aside>

@@ -24,7 +24,6 @@
         display: none;
     }
 
-
     * {
         @apply antialiased font-raleway text-base text-clr-text scroll-smooth
     }
@@ -67,6 +66,10 @@
 
     .btn-social {
         @apply p-2 border border-clr-accent bg-clr-accent hover:-translate-y-1 hover:drop-shadow-md
+    }
+
+    .link-ltr {
+        @apply relative after:transition-all after:absolute after:bottom-0 after:duration-300 after:hover:scale-x-100 after:block after:w-full after:h-px after:bg-white after:scale-x-0 after:origin-left
     }
 }
 
