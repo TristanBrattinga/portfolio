@@ -1,58 +1,13 @@
-import ProjectList from 'ui/components/ProjectList'
+import ProjectMenu from 'ui/components/ProjectMenu'
 
 export default function Page() {
     return (
         <>
-            <ProjectList
-                projects={[
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'large',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'medium',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'medium',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
-                    {
-                        image: { src: '/images/stock.jpg', alt: '' },
-                        link: { link: '', label: '' },
-                        title: 'Project',
-                        date: new Date(),
-                        description: 'This is the project description',
-                        size: 'small',
-                    },
+            <ProjectMenu
+                subjects={[
+                    { title: 'School', link: 'school' },
+                    { title: 'Professional', link: 'professional' },
+                    { title: 'Photography', link: 'photography' },
                 ]}
             />
         </>

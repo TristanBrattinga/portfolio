@@ -68,7 +68,7 @@ const ContactForm = () => {
             </FormProvider>
             <div
                 className={clsx(
-                    'flex items-center justify-between rounded-xl bg-green-50 p-2 select-none mt-4',
+                    'fixed flex items-center justify-between rounded-xl bg-green-50 p-2 select-none mt-4',
                     {
                         'bg-green-50': success,
                         'bg-red-50': !success,

@@ -13,7 +13,7 @@ const Footer = ({ socialLinks }: FooterProps) => {
 
     return (
         <footer className="">
-            <section className="container flex flex-col gap-4 items-center py-10">
+            <section className="container flex flex-col gap-4 items-center mt-10 pb-2">
                 <ul className="flex gap-6">
                     {socialLinks?.map((social, index) => (
                         <li key={index} ref={ref} style={stagger(index, 200)} className={clsx(slideInTop(inView))}>
@@ -23,7 +23,7 @@ const Footer = ({ socialLinks }: FooterProps) => {
                         </li>
                     ))}
                 </ul>
-                <p>Tristan Brattinga©, {YEAR}. All rights reserved.</p>
+                <p className="text-sm">Tristan Brattinga©, {YEAR}. All rights reserved.</p>
             </section>
         </footer>
     )

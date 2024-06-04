@@ -66,9 +66,9 @@ const Header = ({ links, logoText }: HeaderProps) => {
                             <li key={index}>
                                 <Link
                                     href={link.link}
-                                    className={clsx('block w-full px-4 py-2 text-black rounded-full', {
-                                        'bg-clr-primary': path === link.link,
-                                        'bg-transparent': path !== link.link,
+                                    className={clsx('block text-center w-20 py-2 text-black rounded-full', {
+                                        'bg-clr-primary': path === link.link || path.startsWith(link.link + '/'),
+                                        'bg-transparent': !(path === link.link || path.startsWith(link.link + '/')),
                                     })}
                                 >
                                     {link.label}
