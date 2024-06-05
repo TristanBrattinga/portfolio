@@ -4,7 +4,7 @@ export default function Page() {
     return (
         <>
             <ProjectMenu
-                subjects={[
+                categories={[
                     { title: 'School', link: 'school' },
                     { title: 'Professional', link: 'professional' },
                     { title: 'Photography', link: 'photography' },

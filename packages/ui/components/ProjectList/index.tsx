@@ -2,9 +2,10 @@ import { ProjectListProps } from './types'
 import ProjectCard from '../ProjectCard'
 import clsx from 'clsx'
 
-const ProjectList = ({ projects }: ProjectListProps) => {
+const ProjectList = ({ projects, category }: ProjectListProps) => {
     return (
-        <section className="">
+        <section>
+            <h2 className="text-5xl capitalize font-medium border-b border-white pb-4 mb-6">{`${category} projects`}</h2>
             <ul className="flex flex-wrap gap-5">
                 {projects?.map((project, index) => (
                     <li
@@ -15,7 +16,7 @@ const ProjectList = ({ projects }: ProjectListProps) => {
                             'w-[800px]': project.size === 'large',
                         })}
                     >
-                        <ProjectCard project={project} />
+                        <ProjectCard category={category} project={project} />
                     </li>
                 ))}
             </ul>

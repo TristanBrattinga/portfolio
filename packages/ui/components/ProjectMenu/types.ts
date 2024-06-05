@@ -1,5 +1,5 @@
-import { SubjectType } from '../ProjectSubject/types'
+import { CategoryType } from '../ProjectCategory/types'
 
 export type ProjectMenuProps = {
-    subjects: SubjectType[]
+    categories: CategoryType[]
 }

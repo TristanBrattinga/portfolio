@@ -1,13 +1,13 @@
 import { ProjectMenuProps } from './types'
-import ProjectSubject from '../ProjectSubject'
+import ProjectCategory from '../ProjectCategory'
 
-const ProjectMenu = ({ subjects }: ProjectMenuProps) => {
+const ProjectMenu = ({ categories }: ProjectMenuProps) => {
     return (
         <section className="container my-12 lg:my-36">
             <ul className="flex justify-between gap-10">
-                {subjects.map((subject, index) => (
+                {categories.map((category, index) => (
                     <li key={index}>
-                        <ProjectSubject subject={subject} />
+                        <ProjectCategory category={category} />
                     </li>
                 ))}
             </ul>
