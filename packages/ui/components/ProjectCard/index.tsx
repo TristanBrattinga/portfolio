@@ -19,8 +19,8 @@ const ProjectCard = ({ project, category }: ProjectCardProps) => {
     }, [])
 
     return (
-        <Link
-            href={`/work/${category}/${slugifyString(project.title)}`}
+        <article
+            // href={`/work/${category}/${slugifyString(project.title)}`}
             id={slugifyString(project.title)}
             className={clsx('block relative group w-full')}
         >
@@ -53,7 +53,7 @@ const ProjectCard = ({ project, category }: ProjectCardProps) => {
                 <h2 className="text-2xl font-medium uppercase mb-1">{project.title}</h2>
                 <p className="text-sm">{project.description}</p>
             </article>
-        </Link>
+        </article>
     )
 }
 

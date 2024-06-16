@@ -6,7 +6,7 @@ export default function Page() {
             <ProjectMenu
                 categories={[
                     { title: 'School', link: 'school' },
-                    { title: 'Professional', link: 'professional' },
+                    { title: 'Professional', link: 'professional', comingSoon: true },
                     { title: 'Photography', link: 'photography', comingSoon: true },
                 ]}
             />

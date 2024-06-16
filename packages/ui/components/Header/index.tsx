@@ -35,24 +35,7 @@ const Header = ({ links, logoText }: HeaderProps) => {
             <nav className="container flex justify-between items-center">
                 <div className="w-full md:w-1/3">
                     <Link href={'/'} className="block w-fit">
-                        <h1
-                            className={clsx(
-                                'flex shrink-0 [&>span]:font-ailerons [&>span]:text-2xl [&>span]:md:text-3xl',
-                            )}
-                        >
-                            {logoText.split('').map((char, index) => {
-                                return (
-                                    <span
-                                        key={index}
-                                        ref={ref}
-                                        style={stagger(index, 200)}
-                                        className={clsx('', slideInTop(inView))}
-                                    >
-                                        {char}
-                                    </span>
-                                )
-                            })}
-                        </h1>
+                        <h1 className={clsx('flex shrink-0 font-ailerons text-2xl md:text-3xl')}>Tristan Brattinga</h1>
                     </Link>
                 </div>
                 <div
