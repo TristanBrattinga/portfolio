@@ -5,4 +5,5 @@ export type ProjectCategoryProps = {
 export type CategoryType = {
     title: string
     link: string
+    comingSoon?: boolean
 }

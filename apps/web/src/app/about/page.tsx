@@ -1,6 +1,5 @@
-import Image from "next/image"
-import Plaintext from "ui/components/PlainText"
-import WordCloud from "ui/components/WordCloud"
+import Plaintext from 'ui/components/PlainText'
+import WordCloud from 'ui/components/WordCloud'
 
 export default function Page() {
     return (
@@ -10,7 +9,11 @@ export default function Page() {
                 while because of the lockdown and didn't know what to do. I chose to do Communication & Multimedia
                 Design. When I was researching this study I was instantly intrigued by the curriculum. I have always had
                 a certain interest for web development and UI/UX Design. What this study does good is the combination
-                between the tech and visual aspect. I'm still very happy with my choice. Next to my study I'm
+                between the tech and visual aspect. I'm still very happy with my choice."
+            />
+            <WordCloud words={['Nice', 'Social', 'Hard Working', 'Perfectionist', 'Problem Solving', 'Confidence']} />
+            <Plaintext
+                content="Next to my study I'm
                 a chef at a one Michelin Star(just received!) Restaurant, named Lars Amsterdam. As you guessed we are
                 based in Amsterdam, in the Houthavens. I have been a chef here for almost three years now and it has
                 been an amazing experience ever since. It has learned me unbelievably much. From working 14h day shifts,
@@ -20,7 +23,6 @@ export default function Page() {
                 perfectionist in everything I do. I can't do half work. Sometimes this can also be one of my flaws.
                 I sometimes tend to overdo things. I am a very social person who is not afraid to speak up. "
             />
-            <WordCloud words={["Nice", "Social", "Hard Working", "Nice", "Nice", "Social", "Hard Working", "Nice"]} />
         </>
     )
 }

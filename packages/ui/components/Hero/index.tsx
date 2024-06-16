@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react'
 import ImageSlider from '../ImageSlider'
 import Introduction from '../Introduction'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 type AnimationStyle = {
     animationDuration: string
@@ -20,6 +21,7 @@ const generateRandomStyles = (): AnimationStyle => {
 
 const Hero = () => {
     const [styles, setStyles] = useState<AnimationStyle[]>([])
+    const isMobile = useMediaQuery('(max-width: 768px)')
 
     useEffect(() => {
         const newStyles: AnimationStyle[] = [generateRandomStyles(), generateRandomStyles(), generateRandomStyles()]
@@ -27,10 +29,10 @@ const Hero = () => {
     }, [])
 
     return (
-        <section className="flex container my-12 lg:my-36 lg:mb-24 gap-10">
-            <div className="hidden md:block w-1/2">
-                <div className="relative w-fit mx-auto">
-                    {styles.length > 0 && (
+        <section className="flex flex-col md:flex-row container my-12 lg:my-36 lg:mb-24 gap-10">
+            <div className="w-full md:w-1/2">
+                <div className="relative md:w-fit md:mx-auto">
+                    {styles.length > 0 && !isMobile && (
                         <>
                             <div
                                 className="border border-white w-full h-full absolute -left-20 -top-5 border-animation"

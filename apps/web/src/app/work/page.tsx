@@ -7,7 +7,7 @@ export default function Page() {
                 categories={[
                     { title: 'School', link: 'school' },
                     { title: 'Professional', link: 'professional' },
-                    { title: 'Photography', link: 'photography' },
+                    { title: 'Photography', link: 'photography', comingSoon: true },
                 ]}
             />
         </>

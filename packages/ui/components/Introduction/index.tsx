@@ -50,26 +50,11 @@ const Introduction = ({}) => {
                 </span>{' '}
                 years old
             </h2>
-            {/*<p className="max-w-2xl mt-6 md:-ml-10">*/}
-            {/*    I'm a passionate front-end developer hailing from the vibrant city of Amsterdam. With a zest for all*/}
-            {/*    things tech, I dive into the world of web development with boundless enthusiasm and curiosity.*/}
-            {/*    <br />*/}
-            {/*    <br /> As a self-proclaimed geek, I thrive on unraveling the intricacies of code, constantly seeking new*/}
-            {/*    challenges and opportunities to expand my knowledge. Whether it's mastering the latest JavaScript*/}
-            {/*    frameworks or crafting seamless user experiences, I'm always eager to push the boundaries of what's*/}
-            {/*    possible in the digital realm. <br />*/}
-            {/*    <br /> In my journey as a developer, I'm on the lookout for exciting projects and collaborations that*/}
-            {/*    allow me to innovate, grow, and make a meaningful impact. Every line of code I write is fueled by a*/}
-            {/*    relentless drive to learn and improve, striving for excellence in every aspect of my work.*/}
-            {/*    <br />*/}
-            {/*    <br />*/}
-            {/*    When I'm not immersed in the world of web development, you can often find me in the kitchen, indulging*/}
-            {/*    my passion for cooking. Much like coding, cooking allows me to experiment, create, and delight in the*/}
-            {/*    joy of bringing ideas to life. <br />*/}
-            {/*    <br />*/}
-            {/*    Ready to embark on this coding adventure together? Let's connect, collaborate, and create something*/}
-            {/*    extraordinary!*/}
-            {/*</p>*/}
+            <p className="max-w-2xl mt-6">
+                I am an enthusiastic front-end developer at Webbers Agency located in Amsterdam. In my free time I love
+                to cook, play games, code, workout and spend time with friends. It is my dream to be my own boss and
+                start a digital agency and make awesome things for the web!
+            </p>
             <ul className="flex gap-2 justify-end mt-10">
                 <li>
                     <Button as={Link} href="/about" variant="outlined">

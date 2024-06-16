@@ -56,7 +56,7 @@ const Header = ({ links, logoText }: HeaderProps) => {
                     </Link>
                 </div>
                 <div
-                    className={clsx('flex justify-center w-1/3 transition-all duration-500', {
+                    className={clsx('hidden lg:flex justify-center w-1/3 transition-all duration-500', {
                         '-translate-y-14 group-hover:translate-y-0': isScrolled,
                         'translate-y-0': !isScrolled,
                     })}
@@ -79,6 +79,7 @@ const Header = ({ links, logoText }: HeaderProps) => {
                 </div>
                 <div className="md:w-1/3 flex justify-end">
                     <button
+                        className="lg:hidden"
                         onClick={() => {
                             showMenu()
                         }}

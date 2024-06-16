@@ -2,6 +2,7 @@
 
 import { ProgressBarProps } from './types'
 import { motion, useScroll, useSpring } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 const ProgressBar = ({}: ProgressBarProps) => {
     const { scrollYProgress } = useScroll()
