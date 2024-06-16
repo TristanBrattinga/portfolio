@@ -4,7 +4,6 @@ const Page = () => {
     return (
         <>
             <Hero />
-            <p>test</p>
         </>
     )
 }
