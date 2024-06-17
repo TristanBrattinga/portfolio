@@ -17,7 +17,7 @@ const Footer = ({ socialLinks }: FooterProps) => {
                 <ul className="flex gap-6">
                     {socialLinks?.map((social, index) => (
                         <li key={index} ref={ref} style={stagger(index, 200)} className={clsx(slideInTop(inView))}>
-                            <Button as={Link} href={social.link} variant="social">
+                            <Button as={Link} href={social.link} variant="social" aria-label={social.name}>
                                 {social.icon}
                             </Button>
                         </li>

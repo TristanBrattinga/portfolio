@@ -9,6 +9,9 @@ import { Viewport } from 'next'
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html className={`${ailerons.variable} ${raleway.variable} ${nohemi.variable}`} lang="en">
+            <head>
+                <title>Tristan's Portfolio</title>
+            </head>
             <body>
                 <Providers>
                     <MainLayout>{children}</MainLayout>

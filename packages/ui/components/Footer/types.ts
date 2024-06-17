@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode } from 'react'
 
 export type FooterProps = {
     socialLinks: SocialLinksType[]
@@ -7,4 +7,5 @@ export type FooterProps = {
 type SocialLinksType = {
     link: string
     icon: ReactNode
+    name: string
 }

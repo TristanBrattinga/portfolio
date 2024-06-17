@@ -5,8 +5,10 @@ import { ImageSliderProps } from './types'
 import Image from 'next/image'
 import { Autoplay, EffectFade } from 'swiper/modules'
 import 'swiper/css/effect-fade'
+import useMediaQuery from '../../hooks/useMediaQuery'
 
 const ImageSlider = ({ images }: ImageSliderProps) => {
+    const isMobile = useMediaQuery('(max-width: 768px)')
     return (
         <>
             <Swiper
@@ -24,8 +26,9 @@ const ImageSlider = ({ images }: ImageSliderProps) => {
                         <Image
                             src={image.src}
                             alt={image.alt}
-                            width={image.width ? image.width : 1000}
-                            height={image.height ? image.height : 1000}
+                            loading={'eager'}
+                            width={isMobile ? 350 : 700}
+                            height={isMobile ? 350 : 700}
                             className="w-full object-cover object-center"
                         />
                     </SwiperSlide>

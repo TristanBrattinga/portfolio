@@ -32,9 +32,21 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <ProgressBar />
             <Footer
                 socialLinks={[
-                    { link: 'https://github.com/TristanBrattinga', icon: <GithubIcon /> },
-                    { link: 'https://www.linkedin.com/in/tristanbrattinga', icon: <LinkedinIcon /> },
-                    { link: 'https://instagram.com/tristvnk', icon: <InstagramIcon /> },
+                    {
+                        link: 'https://github.com/TristanBrattinga',
+                        icon: <GithubIcon />,
+                        name: 'link to my github account',
+                    },
+                    {
+                        link: 'https://www.linkedin.com/in/tristanbrattinga',
+                        icon: <LinkedinIcon />,
+                        name: 'link to my linkedin account',
+                    },
+                    {
+                        link: 'https://instagram.com/tristvnk',
+                        icon: <InstagramIcon />,
+                        name: 'link to my instagram account',
+                    },
                 ]}
             />
         </>
