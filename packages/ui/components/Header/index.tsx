@@ -35,7 +35,7 @@ const Header = ({ links, logoText }: HeaderProps) => {
             <nav className="container flex justify-between items-center">
                 <div className="w-full md:w-1/3">
                     <Link href={'/'} className="block w-fit">
-                        <h1 className={clsx('flex shrink-0 font-ailerons text-2xl md:text-3xl')}>Tristan Brattinga</h1>
+                        <h1 className={clsx('text-nowrap font-ailerons text-2xl md:text-3xl')}>Tristan Brattinga</h1>
                     </Link>
                 </div>
                 <div
@@ -63,6 +63,7 @@ const Header = ({ links, logoText }: HeaderProps) => {
                 <div className="md:w-1/3 flex justify-end">
                     <button
                         className="lg:hidden"
+                        aria-label="Toggle hamburger menu"
                         onClick={() => {
                             showMenu()
                         }}

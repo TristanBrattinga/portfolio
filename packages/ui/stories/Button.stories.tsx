@@ -10,8 +10,20 @@ export default meta
 
 export const primary = () => {
     return (
-        <div className="m-10">
+        <div className="flex gap-5 m-10">
             <Button href={'#'} variant={'primary'}>
+                Hello
+            </Button>
+            <Button href={'#'} variant={'secondary'}>
+                Hello
+            </Button>
+            <Button href={'#'} variant={'white'}>
+                Hello
+            </Button>
+            <Button href={'#'} variant={'outlined'}>
+                Hello
+            </Button>
+            <Button href={'#'} variant={'accent'}>
                 Hello
             </Button>
         </div>

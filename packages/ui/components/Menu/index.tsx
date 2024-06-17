@@ -62,12 +62,12 @@ const Menu = ({ links }: MenuProps) => {
                     className={clsx('mb-10 ml-auto w-fit cursor-pointer text-[30px] uppercase text-white md:mb-20')}
                     onClick={closeMenu}
                 >
-                    <CloseIcon />
+                    <CloseIcon className="[&_path]:stroke-black size-8" />
                 </div>
                 <ul className="m-auto max-w-lg">
                     {links.map((link, index) => (
                         <li key={index} className="py-4">
-                            <Link href={link.link} className="text-2xl" onClick={closeMenu}>
+                            <Link href={link.link} className="text-2xl text-black" onClick={closeMenu}>
                                 {link.label}
                             </Link>
                         </li>
