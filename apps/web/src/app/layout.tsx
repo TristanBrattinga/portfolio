@@ -11,6 +11,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html className={`${ailerons.variable} ${raleway.variable} ${nohemi.variable}`} lang="en">
             <head>
                 <title>Tristan's Portfolio</title>
+                <meta
+                    name="description"
+                    content="This is the portfolio of Tristan Brattinga. Enjoy reading it and reach out when you want to work together!"
+                />
             </head>
             <body>
                 <Providers>
