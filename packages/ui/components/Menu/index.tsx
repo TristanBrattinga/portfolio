@@ -31,7 +31,7 @@ const Menu = ({ links }: MenuProps) => {
     }, [menuIsShown])
 
     return (
-        <aside>
+        <aside className="block lg:hidden">
             <div
                 onClick={closeMenu}
                 className={clsx('ease fixed inset-0 z-10 h-screen w-full bg-black/30 transition-all duration-700', {
