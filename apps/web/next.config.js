@@ -13,7 +13,7 @@ const securityHeaders = [
     },
     {
         key: 'Content-Security-Policy',
-        value: "default-src 'self'; script-src 'self'; object-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; connect-src 'self'; frame-ancestors 'none'; form-action 'self'; base-uri 'self';",
+        value: `default-src 'self; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline';img-src 'self' blob: data:;font-src 'self';object-src 'none';base-uri 'self';form-action 'self';frame-ancestors 'none';upgrade-insecure-requests;`,
     },
 ]
 
