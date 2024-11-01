@@ -26,47 +26,49 @@ const Introduction = ({}) => {
     }, [age])
 
     return (
-        <section className="">
+        <section className="md:pl-20 max-w-[750px]">
             <h2 className="text-2xl md:text-4xl">
-                Hi, my name is Tristan and I&apos;m{' '}
-                <span
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    className="text-2xl md:text-4xl w-fit inline relative"
-                >
-                    {age}
-                    <div
-                        className={clsx(
-                            'bg-white py-2 px-4 rounded-md absolute right-0 top-0 w-fit',
-                            slideInTop(isHovered),
-                            {
-                                '!-translate-y-[10px]': !isHovered,
-                            },
-                        )}
-                    >
-                        <p className="text-black font-medium">Yes this updates!</p>
-                        <span className="arrow-down"></span>
-                    </div>
-                </span>{' '}
-                years old
+                Hi! My name is Tristan Brattinga and welcome to my portfolio!
+                {/*Hi, my name is Tristan and I&apos;m{' '}*/}
+                {/*<span*/}
+                {/*    onMouseEnter={() => setIsHovered(true)}*/}
+                {/*    onMouseLeave={() => setIsHovered(false)}*/}
+                {/*    className="text-2xl md:text-4xl w-fit inline relative"*/}
+                {/*>*/}
+                {/*    {age}*/}
+                {/*    <div*/}
+                {/*        className={clsx(*/}
+                {/*            'bg-white py-2 px-4 rounded-md absolute right-0 top-0 w-fit',*/}
+                {/*            slideInTop(isHovered),*/}
+                {/*            {*/}
+                {/*                '!-translate-y-[10px]': !isHovered,*/}
+                {/*            },*/}
+                {/*        )}*/}
+                {/*    >*/}
+                {/*        <p className="text-black font-medium">Yes this updates!</p>*/}
+                {/*        <span className="arrow-down"></span>*/}
+                {/*    </div>*/}
+                {/*</span>{' '}*/}
+                {/*years old*/}
             </h2>
-            <p className="max-w-2xl mt-6">
-                I am an enthusiastic front-end developer at Webbers Agency located in Amsterdam. In my free time I love
-                to cook, play games, code, workout and spend time with friends. It is my dream to be my own boss and
-                start a digital agency and make awesome things for the web!
-            </p>
-            <ul className="flex gap-2 justify-end mt-10">
-                <li>
-                    <Button as={Link} href="/about" variant="outlined">
-                        {isMobile ? 'About Me' : 'Learn more about me'}
-                    </Button>
-                </li>
-                <li>
-                    <Button as={Link} href="/work" variant="primary">
-                        {isMobile ? 'My Work' : 'See my Work'}
-                    </Button>
-                </li>
-            </ul>
+            <Button as={Link} href='#ImageProjects' className='mt-10'>See my work</Button>
+            {/*<p className="max-w-2xl mt-6">*/}
+            {/*    I am an enthusiastic front-end developer at Webbers Agency located in Amsterdam. In my free time I love*/}
+            {/*    to cook, play games, code, workout and spend time with friends. It is my dream to be my own boss and*/}
+            {/*    start a digital agency and make awesome things for the web!*/}
+            {/*</p>*/}
+            {/*<ul className="flex gap-2 justify-end mt-10">*/}
+            {/*    <li>*/}
+            {/*        <Button as={Link} href="/about" variant="outlined">*/}
+            {/*            {isMobile ? 'About Me' : 'Learn more about me'}*/}
+            {/*        </Button>*/}
+            {/*    </li>*/}
+            {/*    <li>*/}
+            {/*        <Button as={Link} href="/work" variant="primary">*/}
+            {/*            {isMobile ? 'My Work' : 'See my Work'}*/}
+            {/*        </Button>*/}
+            {/*    </li>*/}
+            {/*</ul>*/}
         </section>
     )
 }
