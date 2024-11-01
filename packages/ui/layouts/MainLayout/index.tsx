@@ -14,10 +14,10 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <Header
                 logoText="Tristan Brattinga"
                 links={[
-                    { link: '/', label: 'Home' },
-                    { link: '/work', label: 'Work' },
-                    { link: '/about', label: 'About' },
-                    { link: '/contact', label: 'Contact' },
+                    // { link: '/', label: 'Home' },
+                    // { link: '/work', label: 'Work' },
+                    // { link: '/about', label: 'About' },
+                    // { link: '/contact', label: 'Contact' },
                 ]}
             />
             <main>{children}</main>
@@ -32,21 +32,21 @@ const MainLayout = ({ children }: MainLayoutProps) => {
             <ProgressBar />
             <Footer
                 socialLinks={[
-                    {
-                        link: 'https://github.com/TristanBrattinga',
-                        icon: <GithubIcon />,
-                        name: 'link to my github account',
-                    },
-                    {
-                        link: 'https://www.linkedin.com/in/tristanbrattinga',
-                        icon: <LinkedinIcon />,
-                        name: 'link to my linkedin account',
-                    },
-                    {
-                        link: 'https://instagram.com/tristvnk',
-                        icon: <InstagramIcon />,
-                        name: 'link to my instagram account',
-                    },
+                    // {
+                    //     link: 'https://github.com/TristanBrattinga',
+                    //     icon: <GithubIcon />,
+                    //     name: 'link to my github account',
+                    // },
+                    // {
+                    //     link: 'https://www.linkedin.com/in/tristanbrattinga',
+                    //     icon: <LinkedinIcon />,
+                    //     name: 'link to my linkedin account',
+                    // },
+                    // {
+                    //     link: 'https://instagram.com/tristvnk',
+                    //     icon: <InstagramIcon />,
+                    //     name: 'link to my instagram account',
+                    // },
                 ]}
             />
         </>

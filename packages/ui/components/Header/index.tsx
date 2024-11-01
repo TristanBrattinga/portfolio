@@ -44,33 +44,35 @@ const Header = ({ links, logoText }: HeaderProps) => {
                         'translate-y-0': !isScrolled,
                     })}
                 >
-                    <ul className="hidden md:flex rounded-full bg-clr-accent gap-2 py-1 px-4 w-fit">
-                        {links?.map((link, index) => (
-                            <li key={index}>
-                                <Link
-                                    href={link.link}
-                                    className={clsx('block text-center w-20 py-2 text-black rounded-full', {
-                                        'bg-clr-primary': path === link.link || path.startsWith(link.link + '/'),
-                                        'bg-transparent': !(path === link.link || path.startsWith(link.link + '/')),
-                                    })}
-                                >
-                                    {link.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
+                    {links.length > 0 && (
+                        <ul className="hidden md:flex rounded-full bg-clr-accent gap-2 py-1 px-4 w-fit">
+                            {links?.map((link, index) => (
+                                <li key={index}>
+                                    <Link
+                                        href={link.link}
+                                        className={clsx('block text-center w-20 py-2 text-black rounded-full', {
+                                            'bg-clr-primary': path === link.link || path.startsWith(link.link + '/'),
+                                            'bg-transparent': !(path === link.link || path.startsWith(link.link + '/')),
+                                        })}
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
-                <div className="md:w-1/3 flex justify-end">
-                    <button
-                        className="lg:hidden"
-                        aria-label="Toggle hamburger menu"
-                        onClick={() => {
-                            showMenu()
-                        }}
-                    >
-                        <HamburgerMenuIcon />
-                    </button>
-                </div>
+                {/*<div className="md:w-1/3 flex justify-end">*/}
+                {/*    <button*/}
+                {/*        className="lg:hidden"*/}
+                {/*        aria-label="Toggle hamburger menu"*/}
+                {/*        onClick={() => {*/}
+                {/*            showMenu()*/}
+                {/*        }}*/}
+                {/*    >*/}
+                {/*        <HamburgerMenuIcon />*/}
+                {/*    </button>*/}
+                {/*</div>*/}
             </nav>
         </header>
     )

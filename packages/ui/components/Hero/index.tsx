@@ -29,8 +29,8 @@ const Hero = () => {
     }, [])
 
     return (
-        <section className="flex md:items-center flex-col lg:flex-row container my-12 lg:my-36 lg:mb-24 gap-10 md:gap-16">
-            <div className="w-full md:w-1/2">
+        <section className="flex md:items-center flex-col lg:flex-row container md:h-screen">
+            <div className="w-full md:w-1/2 my-20">
                 <div className="relative md:w-fit md:mx-auto">
                     {styles.length > 0 && !isMobile && (
                         <>
